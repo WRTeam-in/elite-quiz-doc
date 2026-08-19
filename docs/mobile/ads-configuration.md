@@ -24,10 +24,10 @@ Note down the ad unit IDs for each ad type as you'll need them for configuration
 
 ### 1. Add Ad Ids in the admin panel
 
-1. Open the admin panel > Settings > Ads Settings
+1. Open the admin panel > General Management > Settings > App Ads Settings
 2. Select the Google Admob and add all the ad ids.
 
-![Add Google Ad IDs](/img/app/add-googe-ad-ids.webp)
+![Add Google Ad IDs](/img/app/app_ads_config.png)
 
 ### 2. Platform-Specific Configuration
 
@@ -92,11 +92,11 @@ You can control:
 
 ### Test Device Setup
 
-Add your test device IDs to prevent accidental clicks on live ads during development:
+Add your test device IDs in `lib/commons/utils/gdpr_helper.dart` to prevent accidental clicks on live ads during development:
 
 ```dart
 // Add test device IDs for development
-static const String testDeviceId = "YOUR_TEST_DEVICE_ID";
+const _debugTestDeviceIds = <String>["YOUR_TEST_DEVICE_ID"];
 ```
 
 ## Troubleshooting Common Issues

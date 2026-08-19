@@ -94,7 +94,7 @@ sequenceDiagram
 **Product Types:**
 
 - **Coin Packs**: Consumable purchases (users can buy multiple times)
-- **Remove Ads**: Non-consumable, lifetime purchase (users buy once, keep forever)
+- **Remove Ads**: Consumable purchase (make sure to set product type as **Consumable** in store settings)
 
 :::note Pricing
 You will set the actual prices later in Google Play Console and App Store Connect, not in the Admin Panel. The Admin Panel only defines what users receive (coins or ad removal).
@@ -111,14 +111,14 @@ You will set the actual prices later in Google Play Console and App Store Connec
 - **Description**: Buy 100 Coins
 - **Image**: Upload an icon for this product
 
-### Example: Remove Ads (Non-Consumable)
+### Example: Remove Ads (Consumable)
 
 - **Type**: Ads
 - **Product ID**: `elitequiz_remove_ads`
   - Replace `elitequiz` with your app name
   - Must be **exactly the same** across all platforms
 - **Description**: Remove all advertisements
-- **Note**: You can only create one Remove Ads product
+- **Note**: You should set the product type as **Consumable** in both Google Play Console and App Store Connect.
 
 :::warning Important
 Products you create in the Admin Panel will **not** appear in your app until you also create matching products in Google Play Console and App Store Connect with **identical Product IDs**.
@@ -281,7 +281,7 @@ Product IDs are case-sensitive. `elitequiz_100_coins` is different from `EliteQu
 2. Select your app
 3. Go to `Features > In-App Purchases`
 4. Click `+` to create a new product
-5. Choose type: `Consumable` (for coins) or `Non-Consumable` (for remove ads)
+5. Choose type: `Consumable` (for both coin packs and remove ads)
 6. Enter the **exact same Product ID** you used in Admin Panel
 7. Set your price tier (this is where you set the actual price users will pay)
 8. Add reference name, display name, and description
