@@ -26,9 +26,9 @@ To manage and add system translations, you can go to System Languages and select
 
 Quiz Language refers to the language of the questions and quiz content, not the translations or labels of the app. If you want to have content in multiple languages, this feature will be useful for you.
 
-1. If you want to have multiple languages for the quiz content, enable language mode in your admin panel as shown in the image below. Otherwise, keep it disabled.
+1. If you want to have multiple languages for the quiz content, enable Content Type mode in your admin panel under **General Management** -> **Settings** -> **System Configurations** -> **Quiz Mode**.
 
-   ![Admin Language Setting](../../static/img/app/admin-language-1.webp)
+   ![Enable Content Type Mode](/img/app/enable_content_type.png)
 
 2. Then you can Add/Manage quiz languages from the Languages Section. Skip this step if language mode is disabled.
 

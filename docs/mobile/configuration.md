@@ -69,24 +69,17 @@ To establish a connection between your app and your Admin Panel:
 
 ## Other Configurations
 
-The `config.dart` file also contains **additional configurable settings**. These include:
+The `lib/core/constants/constants.dart` file also contains **additional configurable settings**. These include:
 
-  * Default App Theme: You can set the initial theme to `light` or `dark`.
-  * Phone Login Settings: Configure the default country code and the maximum allowed length for phone numbers during login.
-  * Application Fonts: Define the fonts used throughout the application.
+  * Phone Login Settings: Configure the default country code phone numbers during login.
+
 
 Examples of these configurations are provided below:
 
 ```dart
-/// Default App Theme : light or dark
-const Brightness defaultTheme = Brightness.light;
+// Default country dial code preselected in the phone login.
+const String kDefaultCountryCode = '+91';
 
-// Phone Login, default country code AND max length of phone number allowed
-const defaultCountryCodeForPhoneLogin = 'IN';
-const maxPhoneNumberLength = 16;
-
-final TextStyle kFonts = GoogleFonts.nunito();
-final TextTheme kTextTheme = GoogleFonts.nunitoTextTheme();
 ```
 
 ## What’s Next?
