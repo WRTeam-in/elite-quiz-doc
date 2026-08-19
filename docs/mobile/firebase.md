@@ -29,3 +29,51 @@ Follow the complete Firebase setup guide to configure Firebase and Authenticatio
     Click here →
   </a>
 </div>
+
+## Authentication Providers
+
+:::note Important
+Make sure you have enabled the required Authentication Providers (e.g., **Email/Password**, **Phone**, **Google**, **Apple**) in your Firebase console under **Authentication > Sign-in method**.
+:::
+
+:::warning Billing Plan Requirement
+Make sure your Firebase project plan is upgraded to **Blaze (Pay as you go)**. The Blaze plan is required for **Phone Authentication** to send SMS OTP verification messages without interruption.
+:::
+
+![Firebase Authentication Providers](/img/app/firebase_auth.png)
+
+## Realtime Database Setup
+
+:::info Required Feature
+Firebase Realtime Database is required for **1v1 Battle** and **Group Battle** features to work properly in the app.
+:::
+
+### 1. Create Realtime Database
+
+1. In your Firebase console, navigate to **Build > Realtime Database** (or under **Databases & Storage**).
+2. Click on **Create Database**, select your database location, and click **Next** to initialize.
+
+![Create Realtime Database](/img/app/create_realtime_database.png)
+
+### 2. Update Database Rules
+
+Once the Realtime Database is created:
+
+1. Navigate to the **Rules** tab in the Realtime Database section.
+2. Replace the existing rules with the following JSON configuration and click **Publish**:
+
+```json
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+    "battleRooms": {
+      ".indexOn": ["roomCode", "categoryId", "type"]
+    }
+  }
+}
+```
+
+![Firebase Realtime Database Rules](/img/app/firebase_rtdb_rules.png)
+
+
