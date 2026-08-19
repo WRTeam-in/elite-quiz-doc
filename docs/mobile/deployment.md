@@ -20,7 +20,7 @@ Follow the complete App Deployment guide to build and publish your Elite Quiz Ap
     Click the link below to view the complete App Deployment Guide
   </p>
   <a
-    href="https://wrteam-in.github.io/common_app_doc/GeneralSettings/deployment"
+    href="https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/deployment"
     target="_blank"
     rel="noopener noreferrer"
     style={{color: 'var(--ifm-color-primary)', fontWeight: '600', fontSize: '0.95rem'}}

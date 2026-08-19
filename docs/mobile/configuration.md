@@ -9,7 +9,7 @@ Upon successfully setting up Flutter and running your project, you can **customi
 
 ## Change the Package Name
 
-To update your application's package name, refer to our official guide provided here: [How to Change Package Name](https://wrteam-in.github.io/common_app_doc/GeneralSettings/packagename).
+To update your application's package name, refer to our official guide provided here: [How to Change Package Name](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/packagename).
 
 ## Change the Application Name
 
@@ -58,13 +58,13 @@ Maintaining an up-to-date app version is *crucial* for releases and subsequent u
 
 To establish a connection between your app and your Admin Panel:
 
-1.  Open `lib/core/config/config.dart` within your project.
-2.  Locate the `panelUrl` constant and **update it with the URL of your Admin Panel**:
+1.  Open `lib/core/api/api_endpoints_constants.dart` within your project.
+2.  Locate the `baseUrl` constant and **update it with the URL of your Admin Panel**:
     ```dart
     /// Add your panel url here
     // NOTE: Do not add '/' at the end of the URL
     // NOTE: Check if your admin panel uses http or https
-    const panelUrl = 'https://your-admin-panel-url.com';
+    static const String baseUrl = 'https://your-admin-panel-url.com';
     ```
 
 ## Other Configurations

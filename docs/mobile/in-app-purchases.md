@@ -12,7 +12,7 @@ Elite Quiz supports:
 - A one‑time, lifetime "Remove Ads" purchase
 
 :::warning Prerequisites
-Before proceeding with this guide, please read the [WRTeam Common IAP Documentation](https://wrteam-in.github.io/common_app_doc/GeneralSettings/iap) to understand:
+Before proceeding with this guide, please read the [WRTeam Common IAP Documentation](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/iap) to understand:
 
 - How to create In-App Purchases in **App Store** and **Play Console**
 - Different types of IAP (consumable, non-consumable)
@@ -537,7 +537,7 @@ When a store issues a refund:
 
 If you're experiencing IAP problems not covered here:
 
-1. **Check Platform Documentation**: Review the [WRTeam Common IAP Documentation](https://wrteam-in.github.io/common_app_doc/GeneralSettings/iap)
+1. **Check Platform Documentation**: Review the [WRTeam Common IAP Documentation](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/iap)
 2. **Review Server Logs**: Check Admin Panel logs for verification errors
 3. **Test Methodically**: Isolate the issue (Android vs iOS? Specific products? All users or just some?)
 4. **Contact Support**: Provide detailed information including:

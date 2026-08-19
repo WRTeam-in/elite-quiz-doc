@@ -1,4 +1,6 @@
 ---
+title: Overview
+sidebar_label: Overview
 sidebar_position: 1
 pagination_prev: null
 ---
@@ -23,15 +25,16 @@ We have tested App Code with the software versions listed below. If you choose t
 
 #### Core Requirements
 
-- **Android Studio**: Version 2025.1.1 (Narwhal) (https://developer.android.com/studio)
-- **Flutter**: Version 3.32.x
+- **Android Studio**: Latest Version (https://developer.android.com/studio)
+- **Android SDK**: Version 36.0.0 (Platform 36.1)
+- **Flutter**: Version 3.44.x (Channel stable)
 - **Java**: Version 21
 
 #### macOS-Specific Requirements
 
 - **Homebrew**: Latest version
 - **CocoaPods**: Version 1.16.2
-- **Xcode**: Version 16.4
+- **Xcode**: Version 26.2
 
 #### Optional, But Recommended
 

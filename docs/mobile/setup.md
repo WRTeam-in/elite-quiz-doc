@@ -20,7 +20,7 @@ Follow the complete Flutter setup guide to configure your development environmen
     Click the link below to view the complete Flutter Setup Guide
   </p>
   <a
-    href="https://wrteam-in.github.io/common_app_doc/GeneralSettings/basicsetup"
+    href="https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/basicsetup"
     target="_blank"
     rel="noopener noreferrer"
     style={{color: 'var(--ifm-color-primary)', fontWeight: '600', fontSize: '0.95rem'}}
