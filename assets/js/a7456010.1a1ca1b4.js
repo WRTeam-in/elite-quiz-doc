@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkelite_quiz_docs=self.webpackChunkelite_quiz_docs||[]).push([[1235],{88552:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-pages","id":"default"}')}}]);

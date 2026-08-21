@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-mobile/in-app-purchases" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Configure In‑App Purchases | Elite Quiz Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://wrteam-in.github.io/elite_quiz_doc/mobile/in-app-purchases"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Configure In‑App Purchases | Elite Quiz Documentation"><meta data-rh="true" name="description" content="Overview"><meta data-rh="true" property="og:description" content="Overview"><link data-rh="true" rel="icon" href="/elite_quiz_doc/img/favicon.svg"><link data-rh="true" rel="canonical" href="https://wrteam-in.github.io/elite_quiz_doc/mobile/in-app-purchases"><link data-rh="true" rel="alternate" href="https://wrteam-in.github.io/elite_quiz_doc/mobile/in-app-purchases" hreflang="en"><link data-rh="true" rel="alternate" href="https://wrteam-in.github.io/elite_quiz_doc/mobile/in-app-purchases" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Configure In‑App Purchases","item":"https://wrteam-in.github.io/elite_quiz_doc/mobile/in-app-purchases"}]}</script><link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CS432E2TJ6"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-CS432E2TJ6",{anonymize_ip:!0})</script><link rel="stylesheet" href="/elite_quiz_doc/assets/css/styles.1484aa78.css">
+<script src="/elite_quiz_doc/assets/js/runtime~main.0de1c3f3.js" defer="defer"></script>
+<script src="/elite_quiz_doc/assets/js/main.0ec14607.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/elite_quiz_doc/"><div class="navbar__logo"><img src="/elite_quiz_doc/img/logo.svg" alt="Elite Quiz Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/elite_quiz_doc/img/logo.svg" alt="Elite Quiz Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Elite Quiz Docs</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://wrteam.in/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">WRTeam<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/elite_quiz_doc/introduction"><span title="Introduction" class="linkLabel_WmDU">Introduction</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/elite_quiz_doc/overview"><span title="Overview" class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/elite_quiz_doc/features/overview"><span title="Features" class="categoryLinkLabel_W154">Features</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/elite_quiz_doc/admin/overview"><span title="Admin Panel" class="categoryLinkLabel_W154">Admin Panel</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/elite_quiz_doc/common_firebase_config"><span title="Common Firebase Configuration" class="linkLabel_WmDU">Common Firebase Configuration</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/elite_quiz_doc/web/web-setup-overview"><span title="Website" class="categoryLinkLabel_W154">Website</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/elite_quiz_doc/mobile/overview"><span title="Mobile App" class="categoryLinkLabel_W154">Mobile App</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/elite_quiz_doc/mobile/overview"><span title="overview" class="linkLabel_WmDU">overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/elite_quiz_doc/mobile/setup"><span title="Initial Setup" class="linkLabel_WmDU">Initial Setup</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/elite_quiz_doc/mobile/configuration"><span title="App Configuration" class="linkLabel_WmDU">App Configuration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/elite_quiz_doc/mobile/firebase"><span title="Firebase Setup" class="linkLabel_WmDU">Firebase Setup</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/elite_quiz_doc/mobile/customization"><span title="App Customization" class="linkLabel_WmDU">App Customization</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/elite_quiz_doc/mobile/monetization"><span title="App Monetization" class="categoryLinkLabel_W154">App Monetization</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/elite_quiz_doc/mobile/monetization"><span title="App Monetization" class="linkLabel_WmDU">App Monetization</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/elite_quiz_doc/mobile/ads-configuration"><span title="Configure Ads" class="linkLabel_WmDU">Configure Ads</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/elite_quiz_doc/mobile/in-app-purchases"><span title="Configure In‑App Purchases" class="linkLabel_WmDU">Configure In‑App Purchases</span></a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/elite_quiz_doc/mobile/notifications"><span title="Notification Setup" class="linkLabel_WmDU">Notification Setup</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/elite_quiz_doc/mobile/deployment"><span title="App Deployment" class="linkLabel_WmDU">App Deployment</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/elite_quiz_doc/mobile/update"><span title="How to Update" class="linkLabel_WmDU">How to Update</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/elite_quiz_doc/mobile/16kb-page-size"><span title="16 KB Page Size Compatibility" class="linkLabel_WmDU">16 KB Page Size Compatibility</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/elite_quiz_doc/mobile/faq"><span title="Frequently Asked Questions" class="linkLabel_WmDU">Frequently Asked Questions</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/elite_quiz_doc/changelog/web"><span title="Changelogs" class="categoryLinkLabel_W154">Changelogs</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/elite_quiz_doc/support"><span title="Contact Support" class="linkLabel_WmDU">Contact Support</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/elite_quiz_doc/rating"><span title="Feedback &amp; Suggestions" class="linkLabel_WmDU">Feedback &amp; Suggestions</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/elite_quiz_doc/faq"><span title="FAQ" class="linkLabel_WmDU">FAQ</span></a></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/elite_quiz_doc/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Mobile App</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">App Monetization</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Configure In‑App Purchases</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Configure In‑App Purchases</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<p>Elite Quiz supports:</p>
+<ul>
+<li class="">Purchasing virtual coins using in‑app purchases (IAP)</li>
+<li class="">A one‑time, lifetime &quot;Remove Ads&quot; purchase</li>
+</ul>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Prerequisites</div><div class="admonitionContent_BuS1"><p>Before proceeding with this guide, please read the <a href="https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/iap" target="_blank" rel="noopener noreferrer" class="">WRTeam Common IAP Documentation</a> to understand:</p><ul>
+<li class="">How to create In-App Purchases in <strong>App Store</strong> and <strong>Play Console</strong></li>
+<li class="">Different types of IAP (consumable, non-consumable)</li>
+<li class="">IAP testing procedures and requirements</li>
+<li class="">Platform-specific guidelines and restrictions</li>
+</ul><p>This foundational knowledge is essential because this page focuses only on Elite Quiz–specific configuration.</p></div></div>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>Subscriptions are not currently supported.</p></div></div>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary><strong>Quick Start Checklist (For Experienced Users)</strong></summary><div><div class="collapsibleContent_i85q"><ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Create IAP products in Admin Panel (<code>Settings &gt; Coin Store Settings</code>)</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <strong>Android</strong>: Add package name to Admin Panel</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <strong>Android</strong>: Add Firebase service account to Play Console with admin permissions</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <strong>Android</strong>: Enable Google Play Android Developer API</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <strong>iOS</strong>: Add App Store Connect shared secret to Admin Panel</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Create matching products in Play Console and App Store Connect with identical IDs</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Upload app to testing tracks and test purchases</li>
+</ul></div></div></details>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-in-app-purchases-work">How In-App Purchases Work<a href="#how-in-app-purchases-work" class="hash-link" aria-label="Direct link to How In-App Purchases Work" title="Direct link to How In-App Purchases Work" translate="no">​</a></h2>
+<p>Understanding how IAP works helps you set up correctly and fix problems. Here&#x27;s what happens when a user buys coins:</p>
+<!-- -->
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-security-features">Key Security Features<a href="#key-security-features" class="hash-link" aria-label="Direct link to Key Security Features" title="Direct link to Key Security Features" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Server-Side Verification</strong>: All purchases are validated with the app stores before giving coins to users</li>
+<li class=""><strong>Secure Coin Crediting</strong>: Coins are added on the server side, so users cannot cheat the system</li>
+<li class=""><strong>Receipt Validation</strong>: Every purchase is verified with Google Play or Apple&#x27;s servers before acceptance</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-1-create-products-in-admin-panel">Step 1: Create Products in Admin Panel<a href="#step-1-create-products-in-admin-panel" class="hash-link" aria-label="Direct link to Step 1: Create Products in Admin Panel" title="Direct link to Step 1: Create Products in Admin Panel" translate="no">​</a></h2>
+<ol>
+<li class="">Open the Admin Panel and go to <code>Settings &gt; Coin Store Settings</code></li>
+<li class="">Create your coin packs and remove-ads product</li>
+</ol>
+<p><strong>Product Types:</strong></p>
+<ul>
+<li class=""><strong>Coin Packs</strong>: Consumable purchases (users can buy multiple times)</li>
+<li class=""><strong>Remove Ads</strong>: Non-consumable, lifetime purchase (users buy once, keep forever)</li>
+</ul>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Pricing</div><div class="admonitionContent_BuS1"><p>You will set the actual prices later in Google Play Console and App Store Connect, not in the Admin Panel. The Admin Panel only defines what users receive (coins or ad removal).</p></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-100-coins-pack-consumable">Example: 100 Coins Pack (Consumable)<a href="#example-100-coins-pack-consumable" class="hash-link" aria-label="Direct link to Example: 100 Coins Pack (Consumable)" title="Direct link to Example: 100 Coins Pack (Consumable)" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Name</strong>: 100 Coins</li>
+<li class=""><strong>Coins</strong>: 100</li>
+<li class=""><strong>Product ID</strong>: <code>elitequiz_consumable_100_coins</code>
+<ul>
+<li class="">Replace <code>elitequiz</code> with your app name</li>
+<li class="">Must be <strong>exactly the same</strong> in Admin Panel, Play Console, and App Store Connect</li>
+<li class="">Use only lowercase letters, numbers, and underscores</li>
+</ul>
+</li>
+<li class=""><strong>Description</strong>: Buy 100 Coins</li>
+<li class=""><strong>Image</strong>: Upload an icon for this product</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-remove-ads-non-consumable">Example: Remove Ads (Non-Consumable)<a href="#example-remove-ads-non-consumable" class="hash-link" aria-label="Direct link to Example: Remove Ads (Non-Consumable)" title="Direct link to Example: Remove Ads (Non-Consumable)" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Type</strong>: Ads</li>
+<li class=""><strong>Product ID</strong>: <code>elitequiz_remove_ads</code>
+<ul>
+<li class="">Replace <code>elitequiz</code> with your app name</li>
+<li class="">Must be <strong>exactly the same</strong> across all platforms</li>
+</ul>
+</li>
+<li class=""><strong>Description</strong>: Remove all advertisements</li>
+<li class=""><strong>Note</strong>: You can only create one Remove Ads product</li>
+</ul>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Important</div><div class="admonitionContent_BuS1"><p>Products you create in the Admin Panel will <strong>not</strong> appear in your app until you also create matching products in Google Play Console and App Store Connect with <strong>identical Product IDs</strong>.</p></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-2-platform-specific-configuration">Step 2: Platform-Specific Configuration<a href="#step-2-platform-specific-configuration" class="hash-link" aria-label="Direct link to Step 2: Platform-Specific Configuration" title="Direct link to Step 2: Platform-Specific Configuration" translate="no">​</a></h2>
+<p>Before creating products in app stores, complete these platform-specific setup steps:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="android-configuration">Android Configuration<a href="#android-configuration" class="hash-link" aria-label="Direct link to Android Configuration" title="Direct link to Android Configuration" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-1-add-your-android-package-name">Step 1: Add Your Android Package Name<a href="#step-1-add-your-android-package-name" class="hash-link" aria-label="Direct link to Step 1: Add Your Android Package Name" title="Direct link to Step 1: Add Your Android Package Name" translate="no">​</a></h4>
+<ol>
+<li class="">Go to <code>Admin Panel &gt; Settings &gt; In-App Settings</code></li>
+<li class="">Enter your Android app package name in the <code>App Package Name</code> field<!-- -->
+<ul>
+<li class="">Example: <code>com.yourcompany.elitequiz</code></li>
+<li class="">This must match the package name in your Android app</li>
+</ul>
+</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Add Android Package name in In-App Settings" src="/elite_quiz_doc/assets/images/panel_iap_add_package_name-856ca263a441dd513b7f94d9a7099760.webp" width="4064" height="2322" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-2-connect-firebase-to-play-console">Step 2: Connect Firebase to Play Console<a href="#step-2-connect-firebase-to-play-console" class="hash-link" aria-label="Direct link to Step 2: Connect Firebase to Play Console" title="Direct link to Step 2: Connect Firebase to Play Console" translate="no">​</a></h4>
+<p>This allows the Admin Panel to verify purchases with Google Play.</p>
+<ol>
+<li class="">In Admin Panel, go to <code>Settings &gt; In-App Settings</code></li>
+<li class="">Copy the <strong>Firebase Client Email</strong> (shown in the settings)</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Copy Client email from In-App Settings" src="/elite_quiz_doc/assets/images/panel_iap_copy_client_email-b98c91236f1ca71bc910b6ba9fd019ea.webp" width="4064" height="2322" class="img_ev3q"></p>
+<ol start="3">
+<li class="">Open <a href="https://play.google.com/console/u/0/developers/_/app-list" target="_blank" rel="noopener noreferrer" class="">Google Play Console</a></li>
+<li class="">Go to <code>Users and permissions</code></li>
+<li class="">Click <code>Invite new users</code></li>
+<li class="">Paste the Firebase Client Email you copied</li>
+<li class="">In the <code>Permissions</code> section, click <code>Add App</code> under the <code>App permissions</code> tab</li>
+<li class="">Select your app and click <code>Apply</code></li>
+<li class="">Select <code>Admin (all permissions)</code> and click <code>Apply</code></li>
+<li class="">Click <code>Invite user</code></li>
+</ol>
+<p><strong>Watch the video guide:</strong></p>
+<iframe width="100%" height="500" style="border-radius:10px;border:none" src="https://www.youtube.com/embed/vfIiAUhwXrY" title="Add Firebase Client Email to Play Console" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-important-wait-time-required">⏱️ Important: Wait Time Required<a href="#️-important-wait-time-required" class="hash-link" aria-label="Direct link to ⏱️ Important: Wait Time Required" title="Direct link to ⏱️ Important: Wait Time Required" translate="no">​</a></h4>
+<p>Google Play needs time to process these permission changes. This is normal.</p>
+<ul>
+<li class=""><strong>Minimum wait</strong>: 2-4 hours</li>
+<li class=""><strong>Maximum wait</strong>: Up to 24 hours (in rare cases)</li>
+</ul>
+<p>If IAP doesn&#x27;t work immediately after setup:</p>
+<ol>
+<li class="">Wait 2-4 hours, then test again</li>
+<li class="">If still not working, wait up to 24 hours</li>
+<li class="">Clear your app cache and reinstall before testing</li>
+</ol>
+<p>Most setups work within 4 hours.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-3-enable-google-play-android-developer-api">Step 3: Enable Google Play Android Developer API<a href="#step-3-enable-google-play-android-developer-api" class="hash-link" aria-label="Direct link to Step 3: Enable Google Play Android Developer API" title="Direct link to Step 3: Enable Google Play Android Developer API" translate="no">​</a></h4>
+<ol>
+<li class="">Go to <a href="https://console.cloud.google.com" target="_blank" rel="noopener noreferrer" class="">Google Cloud Console</a></li>
+<li class="">Make sure the correct Firebase project is selected (check the top dropdown)</li>
+<li class="">Click this link to enable the API: <a href="https://console.cloud.google.com/marketplace/product/google/androidpublisher.googleapis.com" target="_blank" rel="noopener noreferrer" class="">Enable Google Play Android Developer API</a></li>
+<li class="">Click the <code>Enable</code> button</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Enable Google Play Android Developer API" src="/elite_quiz_doc/assets/images/google_console_verify_play_android_developer_api_is_enabled-bb857bd86d2de7d0a5c2a986a65b648a.webp" width="3266" height="2070" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-4-upload-app-for-testing">Step 4: Upload App for Testing<a href="#step-4-upload-app-for-testing" class="hash-link" aria-label="Direct link to Step 4: Upload App for Testing" title="Direct link to Step 4: Upload App for Testing" translate="no">​</a></h4>
+<ol>
+<li class="">Upload your app to Google Play Console in any testing track (Internal, Closed, or Open Testing)</li>
+<li class="">Wait for Google to review your app (this usually takes a few hours)</li>
+<li class="">Once reviewed, add your email to <code>License Testing</code> to test purchases without paying real money</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ios-configuration">iOS Configuration<a href="#ios-configuration" class="hash-link" aria-label="Direct link to iOS Configuration" title="Direct link to iOS Configuration" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-1-get-the-shared-secret-from-app-store-connect">Step 1: Get the Shared Secret from App Store Connect<a href="#step-1-get-the-shared-secret-from-app-store-connect" class="hash-link" aria-label="Direct link to Step 1: Get the Shared Secret from App Store Connect" title="Direct link to Step 1: Get the Shared Secret from App Store Connect" translate="no">​</a></h4>
+<p>The shared secret allows the Admin Panel to verify iOS purchases with Apple.</p>
+<ol>
+<li class="">Open <a href="https://appstoreconnect.apple.com" target="_blank" rel="noopener noreferrer" class="">App Store Connect</a></li>
+<li class="">Click on your app</li>
+<li class="">Go to <code>App Information</code> (in the left sidebar under <code>General</code>)</li>
+<li class="">Scroll down to the <code>App-Specific Shared Secret</code> section</li>
+<li class="">Click <code>Manage</code> or <code>Generate</code> if you don&#x27;t have one yet</li>
+<li class="">Copy the shared secret code</li>
+</ol>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Use App-Specific Shared Secret</div><div class="admonitionContent_BuS1"><p>Make sure you copy the <strong>App-Specific Shared Secret</strong>, not the Master Shared Secret. The app-specific version is more secure.</p></div></div>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-2-add-shared-secret-to-admin-panel">Step 2: Add Shared Secret to Admin Panel<a href="#step-2-add-shared-secret-to-admin-panel" class="hash-link" aria-label="Direct link to Step 2: Add Shared Secret to Admin Panel" title="Direct link to Step 2: Add Shared Secret to Admin Panel" translate="no">​</a></h4>
+<ol>
+<li class="">Go to <code>Admin Panel &gt; Settings &gt; In-App Settings</code></li>
+<li class="">Find the <code>iOS Shared Secret</code> field</li>
+<li class="">Paste the shared secret you copied from App Store Connect</li>
+<li class="">Click <code>Save</code></li>
+</ol>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Double-Check for Errors</div><div class="admonitionContent_BuS1"><p>Make sure there are no extra spaces at the beginning or end of the shared secret. Extra spaces will cause verification to fail.</p></div></div>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-3-upload-app-to-testflight">Step 3: Upload App to TestFlight<a href="#step-3-upload-app-to-testflight" class="hash-link" aria-label="Direct link to Step 3: Upload App to TestFlight" title="Direct link to Step 3: Upload App to TestFlight" translate="no">​</a></h4>
+<ol>
+<li class="">Build your iOS app in Xcode</li>
+<li class="">Upload to App Store Connect</li>
+<li class="">Submit to TestFlight</li>
+<li class="">Wait for Apple to process your build (usually 30-60 minutes)</li>
+<li class="">Add testers in TestFlight to test purchases</li>
+</ol>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Testing Requirements</div><div class="admonitionContent_BuS1"><p>In-app purchase testing requires your app to be distributed through official channels:</p><ul>
+<li class=""><strong>Android</strong>: App must be uploaded to Google Play Console in a testing track</li>
+<li class=""><strong>iOS</strong>: App must be distributed via TestFlight</li>
+</ul><p>You <strong>cannot</strong> test IAP in local development builds or emulators. You must use real devices with apps installed from the stores.</p></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-3-create-products-in-app-stores">Step 3: Create Products in App Stores<a href="#step-3-create-products-in-app-stores" class="hash-link" aria-label="Direct link to Step 3: Create Products in App Stores" title="Direct link to Step 3: Create Products in App Stores" translate="no">​</a></h2>
+<p>Now create matching products in Google Play Console and App Store Connect.</p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Product ID Consistency</div><div class="admonitionContent_BuS1"><p>The most important rule: <strong>Product IDs must be exactly identical</strong> across:</p><ul>
+<li class="">Admin Panel</li>
+<li class="">Google Play Console</li>
+<li class="">App Store Connect</li>
+</ul><p>Product IDs are case-sensitive. <code>elitequiz_100_coins</code> is different from <code>EliteQuiz_100_Coins</code>.</p></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="create-products-in-google-play-console">Create Products in Google Play Console<a href="#create-products-in-google-play-console" class="hash-link" aria-label="Direct link to Create Products in Google Play Console" title="Direct link to Create Products in Google Play Console" translate="no">​</a></h3>
+<ol>
+<li class="">Open <a href="https://play.google.com/console" target="_blank" rel="noopener noreferrer" class="">Google Play Console</a></li>
+<li class="">Select your app</li>
+<li class="">Go to <code>Monetize &gt; In-app products</code></li>
+<li class="">Click <code>Create product</code></li>
+<li class="">Enter the <strong>exact same Product ID</strong> you used in Admin Panel</li>
+<li class="">Set your price (this is where you set the actual price users will pay)</li>
+<li class="">Add title, description, and save</li>
+<li class="">Click <code>Activate</code> to make the product available</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="create-products-in-app-store-connect">Create Products in App Store Connect<a href="#create-products-in-app-store-connect" class="hash-link" aria-label="Direct link to Create Products in App Store Connect" title="Direct link to Create Products in App Store Connect" translate="no">​</a></h3>
+<ol>
+<li class="">Open <a href="https://appstoreconnect.apple.com" target="_blank" rel="noopener noreferrer" class="">App Store Connect</a></li>
+<li class="">Select your app</li>
+<li class="">Go to <code>Features &gt; In-App Purchases</code></li>
+<li class="">Click <code>+</code> to create a new product</li>
+<li class="">Choose type: <code>Consumable</code> (for coins) or <code>Non-Consumable</code> (for remove ads)</li>
+<li class="">Enter the <strong>exact same Product ID</strong> you used in Admin Panel</li>
+<li class="">Set your price tier (this is where you set the actual price users will pay)</li>
+<li class="">Add reference name, display name, and description</li>
+<li class="">Click <code>Save</code></li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-4-test-your-setup">Step 4: Test Your Setup<a href="#step-4-test-your-setup" class="hash-link" aria-label="Direct link to Step 4: Test Your Setup" title="Direct link to Step 4: Test Your Setup" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="android-testing">Android Testing<a href="#android-testing" class="hash-link" aria-label="Direct link to Android Testing" title="Direct link to Android Testing" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>Add Test Account</strong>:</p>
+<ul>
+<li class="">In Play Console, go to <code>Setup &gt; License testing</code></li>
+<li class="">Add your Gmail address to the list of license testers</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Install and Test</strong>:</p>
+<ul>
+<li class="">Install the app from the testing track on a real Android device</li>
+<li class="">Sign in with your test Gmail account</li>
+<li class="">Go to the coin store in the app</li>
+<li class="">Try purchasing a product</li>
+<li class="">You&#x27;ll see &quot;Test purchase&quot; and won&#x27;t be charged real money</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ios-testing">iOS Testing<a href="#ios-testing" class="hash-link" aria-label="Direct link to iOS Testing" title="Direct link to iOS Testing" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>Create Sandbox Account</strong>:</p>
+<ul>
+<li class="">In App Store Connect, go to <code>Users and Access &gt; Sandbox Testers</code></li>
+<li class="">Click <code>+</code> and create a test account with a unique email</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Test on Device</strong>:</p>
+<ul>
+<li class="">On your iOS device, sign out of your regular Apple ID</li>
+<li class="">Install the app from TestFlight</li>
+<li class="">When you try to purchase, iOS will ask you to sign in</li>
+<li class="">Sign in with your sandbox tester account</li>
+<li class="">Complete the purchase (it&#x27;s free in sandbox mode)</li>
+</ul>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Use Real Devices</div><div class="admonitionContent_BuS1"><p>Always test on real devices (real Android phone or iPhone). IAP <strong>does not work</strong> on emulators or simulators.</p></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="important-notes">Important Notes<a href="#important-notes" class="hash-link" aria-label="Direct link to Important Notes" title="Direct link to Important Notes" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Product ID Consistency</strong>: All product IDs must be identical across Admin Panel, Google Play, and App Store</li>
+<li class=""><strong>Testing Timeline</strong>: Allow time for app store review processes during testing (2-4 hours for Android permissions, 30-60 minutes for iOS builds)</li>
+<li class=""><strong>Purchase Validation</strong>: Elite Quiz includes server-side purchase validation for security</li>
+<li class=""><strong>Data Propagation</strong>: New or updated products can take 1-2 hours to appear in apps; if a product doesn&#x27;t appear, wait and try again</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="frequently-asked-questions">Frequently Asked Questions<a href="#frequently-asked-questions" class="hash-link" aria-label="Direct link to Frequently Asked Questions" title="Direct link to Frequently Asked Questions" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="general-setup">General Setup<a href="#general-setup" class="hash-link" aria-label="Direct link to General Setup" title="Direct link to General Setup" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-dont-my-iap-products-appear-in-the-app">Why don&#x27;t my IAP products appear in the app?<a href="#why-dont-my-iap-products-appear-in-the-app" class="hash-link" aria-label="Direct link to Why don&#x27;t my IAP products appear in the app?" title="Direct link to Why don&#x27;t my IAP products appear in the app?" translate="no">​</a></h4>
+<p>This is usually caused by one of these issues:</p>
+<ol>
+<li class="">
+<p><strong>Product ID Mismatch</strong>: The Product IDs don&#x27;t match exactly</p>
+<ul>
+<li class=""><strong>Solution</strong>: Check that Product IDs are identical (including capital/lowercase letters) in Admin Panel, Play Console, and App Store Connect</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Products Not Approved</strong>: Store products are still in draft or pending review</p>
+<ul>
+<li class=""><strong>Solution</strong>: Make sure products are approved and active in both app stores</li>
+</ul>
+</li>
+<li class="">
+<p><strong>App Not Properly Signed</strong>: Using the wrong build or certificate</p>
+<ul>
+<li class=""><strong>Solution (Android)</strong>: Use the same signing key as your Play Console app</li>
+<li class=""><strong>Solution (iOS)</strong>: Make sure you&#x27;re using the correct provisioning profile</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Store Delay</strong>: Recent changes take time to update</p>
+<ul>
+<li class=""><strong>Solution</strong>: Wait 1-2 hours, then clear app data and reinstall</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="do-i-need-to-create-the-same-products-three-times">Do I need to create the same products three times?<a href="#do-i-need-to-create-the-same-products-three-times" class="hash-link" aria-label="Direct link to Do I need to create the same products three times?" title="Direct link to Do I need to create the same products three times?" translate="no">​</a></h4>
+<p>Yes, you create products in three places, but each serves a different purpose:</p>
+<ol>
+<li class=""><strong>Admin Panel</strong>: Defines what users get (100 coins, remove ads, etc.)</li>
+<li class=""><strong>Google Play Console</strong>: Handles Android payments and sets Android prices</li>
+<li class=""><strong>App Store Connect</strong>: Handles iOS payments and sets iOS prices</li>
+</ol>
+<p>The <strong>Product ID must be identical</strong> in all three places so the system knows they&#x27;re the same product.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="testing">Testing<a href="#testing" class="hash-link" aria-label="Direct link to Testing" title="Direct link to Testing" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-do-i-test-purchases-without-spending-real-money">How do I test purchases without spending real money?<a href="#how-do-i-test-purchases-without-spending-real-money" class="hash-link" aria-label="Direct link to How do I test purchases without spending real money?" title="Direct link to How do I test purchases without spending real money?" translate="no">​</a></h4>
+<p><strong>Android</strong>:</p>
+<ul>
+<li class="">Add your email to &quot;License testing&quot; in Play Console</li>
+<li class="">Install from a testing track (Internal/Closed/Open Testing)</li>
+<li class="">When you purchase, you&#x27;ll see &quot;Test purchase&quot; and won&#x27;t be charged</li>
+</ul>
+<p><strong>iOS</strong>:</p>
+<ul>
+<li class="">Create a sandbox tester account in App Store Connect</li>
+<li class="">Sign out of your real Apple ID on your device</li>
+<li class="">Install from TestFlight</li>
+<li class="">When purchasing, sign in with the sandbox account</li>
+<li class="">Sandbox purchases are free</li>
+</ul>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Test on Real Devices</div><div class="admonitionContent_BuS1"><p>IAP testing <strong>only works on real devices</strong>, not emulators or simulators. You need actual app store connectivity.</p></div></div>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="can-i-test-iap-locally-during-development">Can I test IAP locally during development?<a href="#can-i-test-iap-locally-during-development" class="hash-link" aria-label="Direct link to Can I test IAP locally during development?" title="Direct link to Can I test IAP locally during development?" translate="no">​</a></h4>
+<p>No. IAP testing requires:</p>
+<ul>
+<li class="">App uploaded to app stores (even in testing tracks)</li>
+<li class="">Proper signing and certificates</li>
+<li class="">Test accounts configured in app store consoles</li>
+</ul>
+<p>Local development builds cannot process purchases (real or test).</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="troubleshooting-purchases">Troubleshooting Purchases<a href="#troubleshooting-purchases" class="hash-link" aria-label="Direct link to Troubleshooting Purchases" title="Direct link to Troubleshooting Purchases" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-completed-payment-but-didnt-receive-coins-what-happened">User completed payment but didn&#x27;t receive coins. What happened?<a href="#user-completed-payment-but-didnt-receive-coins-what-happened" class="hash-link" aria-label="Direct link to User completed payment but didn&#x27;t receive coins. What happened?" title="Direct link to User completed payment but didn&#x27;t receive coins. What happened?" translate="no">​</a></h4>
+<p>This usually means the purchase verification failed. Check these in order:</p>
+<ol>
+<li class="">
+<p><strong>Check Platform Configuration</strong>:</p>
+<ul>
+<li class=""><strong>Android</strong>: Is Firebase service account email added to Play Console with admin permissions?</li>
+<li class=""><strong>Android</strong>: Is &quot;Google Play Android Developer API&quot; enabled in Google Cloud?</li>
+<li class=""><strong>iOS</strong>: Is the shared secret correctly added to Admin Panel?</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Check Network Connection</strong>:</p>
+<ul>
+<li class="">The Admin Panel must be able to connect to the internet to verify purchases</li>
+<li class="">Check Admin Panel server logs for errors</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Check Receipt Validation</strong>:</p>
+<ul>
+<li class="">Look in Admin Panel logs for validation errors</li>
+<li class="">Make sure API credentials are correct</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="product-not-found-error-when-trying-to-purchase">&quot;Product not found&quot; error when trying to purchase<a href="#product-not-found-error-when-trying-to-purchase" class="hash-link" aria-label="Direct link to &quot;Product not found&quot; error when trying to purchase" title="Direct link to &quot;Product not found&quot; error when trying to purchase" translate="no">​</a></h4>
+<p><strong>Checklist</strong>:</p>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Product exists and is approved in the correct store (Play Console or App Store Connect)</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Product ID in Admin Panel <strong>exactly matches</strong> the Product ID in the store (check for typos)</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->App package name (Android) or bundle ID (iOS) matches what&#x27;s configured in stores</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->For Android: App is signed with the correct signing key</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Recent product changes have had time to propagate (wait 1-2 hours)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="platform-specific-issues">Platform-Specific Issues<a href="#platform-specific-issues" class="hash-link" aria-label="Direct link to Platform-Specific Issues" title="Direct link to Platform-Specific Issues" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="android-the-item-you-requested-is-not-available-for-purchase">Android: &quot;The item you requested is not available for purchase&quot;<a href="#android-the-item-you-requested-is-not-available-for-purchase" class="hash-link" aria-label="Direct link to Android: &quot;The item you requested is not available for purchase&quot;" title="Direct link to Android: &quot;The item you requested is not available for purchase&quot;" translate="no">​</a></h4>
+<p><strong>Common causes</strong>:</p>
+<ul>
+<li class="">App not uploaded to any testing track</li>
+<li class="">Your email not added to license testing list</li>
+<li class="">Product not activated in Play Console</li>
+<li class="">Wrong package name in app settings</li>
+</ul>
+<p><strong>How to fix</strong>:</p>
+<ol>
+<li class="">Make sure app is in at least Internal Testing track</li>
+<li class="">Add your email to Play Console license testing</li>
+<li class="">Check that product status is &quot;Active&quot; in Play Console</li>
+<li class="">Verify package name matches between app and Admin Panel</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="ios-cannot-connect-to-itunes-store">iOS: &quot;Cannot connect to iTunes Store&quot;<a href="#ios-cannot-connect-to-itunes-store" class="hash-link" aria-label="Direct link to iOS: &quot;Cannot connect to iTunes Store&quot;" title="Direct link to iOS: &quot;Cannot connect to iTunes Store&quot;" translate="no">​</a></h4>
+<p><strong>Common causes</strong>:</p>
+<ul>
+<li class="">Not using a sandbox tester account</li>
+<li class="">Signed in to regular App Store instead of sandbox</li>
+<li class="">Product not submitted or approved</li>
+<li class="">Not using TestFlight build</li>
+</ul>
+<p><strong>How to fix</strong>:</p>
+<ol>
+<li class="">Sign out of your regular Apple ID completely</li>
+<li class="">Use a TestFlight build, not a local development build</li>
+<li class="">When prompted during purchase, sign in with sandbox tester account</li>
+<li class="">Make sure products are &quot;Ready to Submit&quot; or approved in App Store Connect</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="ios-shared-secret-errors">iOS: Shared Secret errors<a href="#ios-shared-secret-errors" class="hash-link" aria-label="Direct link to iOS: Shared Secret errors" title="Direct link to iOS: Shared Secret errors" translate="no">​</a></h4>
+<p><strong>Symptoms</strong>: Purchases complete but verification fails</p>
+<p><strong>How to fix</strong>:</p>
+<ol>
+<li class="">Go to App Store Connect → Your App → App Information</li>
+<li class="">Copy the <strong>App-Specific Shared Secret</strong> (not Master Shared Secret)</li>
+<li class="">Add it to Admin Panel under <code>Settings &gt; In-App Settings</code></li>
+<li class="">Make sure there are no extra spaces at the beginning or end</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="remove-ads-purchase">Remove Ads Purchase<a href="#remove-ads-purchase" class="hash-link" aria-label="Direct link to Remove Ads Purchase" title="Direct link to Remove Ads Purchase" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-purchased-remove-ads-but-still-sees-ads">User purchased &quot;Remove Ads&quot; but still sees ads<a href="#user-purchased-remove-ads-but-still-sees-ads" class="hash-link" aria-label="Direct link to User purchased &quot;Remove Ads&quot; but still sees ads" title="Direct link to User purchased &quot;Remove Ads&quot; but still sees ads" translate="no">​</a></h4>
+<p><strong>Troubleshooting steps</strong>:</p>
+<ol>
+<li class="">
+<p><strong>Check if purchase verified</strong>: Look in Admin Panel to see if the user has the remove-ads entitlement</p>
+</li>
+<li class="">
+<p><strong>App not checking status</strong>: The app might not be checking if ads should be hidden</p>
+<ul>
+<li class="">Make sure the app checks remove-ads status when it starts and before showing ads</li>
+</ul>
+</li>
+<li class="">
+<p><strong>User data not syncing</strong>: User account data might not be up to date</p>
+<ul>
+<li class="">Force sync user data from Admin Panel, or ask user to restore purchases</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Cached data</strong>: Old settings might be cached</p>
+<ul>
+<li class="">Clear app cache/data and restart the app</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="coins-and-consumables">Coins and Consumables<a href="#coins-and-consumables" class="hash-link" aria-label="Direct link to Coins and Consumables" title="Direct link to Coins and Consumables" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="can-users-request-refunds-for-coin-purchases">Can users request refunds for coin purchases?<a href="#can-users-request-refunds-for-coin-purchases" class="hash-link" aria-label="Direct link to Can users request refunds for coin purchases?" title="Direct link to Can users request refunds for coin purchases?" translate="no">​</a></h4>
+<p>Yes, users can request refunds through the app stores:</p>
+<ul>
+<li class=""><strong>Google Play</strong>: Users can request refund within 48 hours through the Play Store app</li>
+<li class=""><strong>Apple App Store</strong>: Users can request refund at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer" class="">reportaproblem.apple.com</a></li>
+</ul>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Handle Refunds</div><div class="admonitionContent_BuS1"><p>When a store issues a refund:</p><ul>
+<li class="">You may receive a notification from the store</li>
+<li class="">You should remove the refunded coins from the user&#x27;s account to prevent abuse</li>
+</ul></div></div>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-do-i-handle-fraudulent-purchases">How do I handle fraudulent purchases?<a href="#how-do-i-handle-fraudulent-purchases" class="hash-link" aria-label="Direct link to How do I handle fraudulent purchases?" title="Direct link to How do I handle fraudulent purchases?" translate="no">​</a></h4>
+<p><strong>Prevention</strong>:</p>
+<ul>
+<li class="">Elite Quiz already uses server-side verification (this prevents most fraud)</li>
+<li class="">Watch for unusual patterns (same user making many purchases then getting refunds)</li>
+<li class="">Consider adding purchase rate limits</li>
+</ul>
+<p><strong>Detection</strong>:</p>
+<ul>
+<li class="">Check store refund notifications regularly</li>
+<li class="">Look for users with negative coin balances (happens after refunds)</li>
+<li class="">Review Admin Panel logs for verification failures</li>
+</ul>
+<p><strong>Response</strong>:</p>
+<ul>
+<li class="">Remove refunded coins from user accounts</li>
+<li class="">Consider banning accounts with multiple fraudulent attempts</li>
+<li class="">Report serious abuse to the app stores</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="still-having-issues">Still Having Issues?<a href="#still-having-issues" class="hash-link" aria-label="Direct link to Still Having Issues?" title="Direct link to Still Having Issues?" translate="no">​</a></h2>
+<p>If you&#x27;re experiencing IAP problems not covered here:</p>
+<ol>
+<li class=""><strong>Check Platform Documentation</strong>: Review the <a href="https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/iap" target="_blank" rel="noopener noreferrer" class="">WRTeam Common IAP Documentation</a></li>
+<li class=""><strong>Review Server Logs</strong>: Check Admin Panel logs for verification errors</li>
+<li class=""><strong>Test Methodically</strong>: Isolate the issue (Android vs iOS? Specific products? All users or just some?)</li>
+<li class=""><strong>Contact Support</strong>: Provide detailed information including:<!-- -->
+<ul>
+<li class="">Platform (Android or iOS)</li>
+<li class="">Product IDs</li>
+<li class="">Error messages</li>
+<li class="">Server logs</li>
+</ul>
+</li>
+</ol></div><div class="feedbackContainer_BbLs"><form class="feedbackForm_Ef19"><h3 class="feedbackTitle_E_Zz">Was this page helpful?</h3><div class="ratingsContainer_UPvg"><button type="button" class="emojiButton_a64K" aria-label="Rate Very Unhelpful" aria-pressed="false"><span class="emoji_l3nk" role="img" aria-label="Very Unhelpful">😞</span><span class="ratingLabel_WUqt">Very Unhelpful</span></button><button type="button" class="emojiButton_a64K" aria-label="Rate Not Helpful" aria-pressed="false"><span class="emoji_l3nk" role="img" aria-label="Not Helpful">😕</span><span class="ratingLabel_WUqt">Not Helpful</span></button><button type="button" class="emojiButton_a64K" aria-label="Rate Okay" aria-pressed="false"><span class="emoji_l3nk" role="img" aria-label="Okay">😐</span><span class="ratingLabel_WUqt">Okay</span></button><button type="button" class="emojiButton_a64K" aria-label="Rate Helpful" aria-pressed="false"><span class="emoji_l3nk" role="img" aria-label="Helpful">😊</span><span class="ratingLabel_WUqt">Helpful</span></button><button type="button" class="emojiButton_a64K" aria-label="Rate Very Helpful" aria-pressed="false"><span class="emoji_l3nk" role="img" aria-label="Very Helpful">🤩</span><span class="ratingLabel_WUqt">Very Helpful</span></button></div></form></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/elite_quiz_doc/mobile/ads-configuration"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Configure Ads</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/elite_quiz_doc/mobile/notifications"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Notification Setup</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#how-in-app-purchases-work" class="table-of-contents__link toc-highlight">How In-App Purchases Work</a><ul><li><a href="#key-security-features" class="table-of-contents__link toc-highlight">Key Security Features</a></li></ul></li><li><a href="#step-1-create-products-in-admin-panel" class="table-of-contents__link toc-highlight">Step 1: Create Products in Admin Panel</a><ul><li><a href="#example-100-coins-pack-consumable" class="table-of-contents__link toc-highlight">Example: 100 Coins Pack (Consumable)</a></li><li><a href="#example-remove-ads-non-consumable" class="table-of-contents__link toc-highlight">Example: Remove Ads (Non-Consumable)</a></li></ul></li><li><a href="#step-2-platform-specific-configuration" class="table-of-contents__link toc-highlight">Step 2: Platform-Specific Configuration</a><ul><li><a href="#android-configuration" class="table-of-contents__link toc-highlight">Android Configuration</a></li><li><a href="#ios-configuration" class="table-of-contents__link toc-highlight">iOS Configuration</a></li></ul></li><li><a href="#step-3-create-products-in-app-stores" class="table-of-contents__link toc-highlight">Step 3: Create Products in App Stores</a><ul><li><a href="#create-products-in-google-play-console" class="table-of-contents__link toc-highlight">Create Products in Google Play Console</a></li><li><a href="#create-products-in-app-store-connect" class="table-of-contents__link toc-highlight">Create Products in App Store Connect</a></li></ul></li><li><a href="#step-4-test-your-setup" class="table-of-contents__link toc-highlight">Step 4: Test Your Setup</a><ul><li><a href="#android-testing" class="table-of-contents__link toc-highlight">Android Testing</a></li><li><a href="#ios-testing" class="table-of-contents__link toc-highlight">iOS Testing</a></li></ul></li><li><a href="#important-notes" class="table-of-contents__link toc-highlight">Important Notes</a></li><li><a href="#frequently-asked-questions" class="table-of-contents__link toc-highlight">Frequently Asked Questions</a><ul><li><a href="#general-setup" class="table-of-contents__link toc-highlight">General Setup</a></li><li><a href="#testing" class="table-of-contents__link toc-highlight">Testing</a></li><li><a href="#troubleshooting-purchases" class="table-of-contents__link toc-highlight">Troubleshooting Purchases</a></li><li><a href="#platform-specific-issues" class="table-of-contents__link toc-highlight">Platform-Specific Issues</a></li><li><a href="#remove-ads-purchase" class="table-of-contents__link toc-highlight">Remove Ads Purchase</a></li><li><a href="#coins-and-consumables" class="table-of-contents__link toc-highlight">Coins and Consumables</a></li></ul></li><li><a href="#still-having-issues" class="table-of-contents__link toc-highlight">Still Having Issues?</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 WRTeam.</div></div></div></footer><div></div></div>
+</body>
+</html>

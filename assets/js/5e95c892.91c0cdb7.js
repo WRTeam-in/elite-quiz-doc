@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkelite_quiz_docs=self.webpackChunkelite_quiz_docs||[]).push([[9647],{7121:(e,s,r)=>{r.r(s),r.d(s,{default:()=>d});r(96540);var u=r(18215),c=r(45500),t=r(17559),a=r(22831),i=r(63277),l=r(74848);function d(e){return(0,l.jsx)(c.e3,{className:(0,u.A)(t.G.wrapper.docsPages),children:(0,l.jsx)(i.A,{children:(0,a.v)(e.route.routes)})})}}}]);

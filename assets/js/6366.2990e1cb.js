@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkelite_quiz_docs=self.webpackChunkelite_quiz_docs||[]).push([[6366],{86366:(e,c,s)=>{s.d(c,{createArchitectureServices:()=>i.S});var i=s(38980);s(87960)}}]);
