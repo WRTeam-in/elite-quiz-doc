@@ -34,7 +34,11 @@ export default {
       label: 'Admin Panel',
       items: [
         'admin/overview',
+        'admin/prerequisite',
         'admin/installation',
+        'admin/cron-job-setup',
+        'admin/legacy-migration-notes',
+        'admin/legacy-data-migration',
         'admin/configuration',
         'admin/settings',
         'admin/system-language',

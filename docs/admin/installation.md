@@ -1,69 +1,46 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# Installing Admin Panel
+# Installation Steps
 
-This guide will walk you through the process of installing the Elite Quiz Admin Panel on your server.
+## 1. Installation Screen
 
-## Installation Steps
+![Installation Screen](/img/panel/installation-steps/step-1.png)
 
-1. **Create your domain or subdomain** on your server (shared hosting or VPS).
+## 2. Server Requirements & Extensions
 
-   :::tip Recommendation for Web Users
-   If you have purchased the web version of Elite Quiz alongside the Admin Panel, it is recommended to install the **Admin Panel on a subdomain** (e.g., `admin.yourdomain.com`) and the **Web application on your main domain** (e.g., `yourdomain.com`). This separation helps in managing both applications effectively.
-   :::
+If PHP version is lower than the requirement (PHP 8.2+ / PHP 8.3+ for v3.0.0+) or any extension is not installed, it will be highlighted in Red. Make sure that your server meets all requirements.
 
-2. **Set up an empty database** on your server and keep track of these credentials:
+**Important Note:** The **`exif`** extension and **`nd_pdo_mysql`** extension are required.
 
-   - Database name
-   - Database username
-   - Database password
+![Server Requirements](/img/panel/installation-steps/step-2.png)
 
-   :::caution Note
-   Avoid using hyphens(-) in the **Database Name**, as it doesn't work in some configurations.
-   :::
+## 3. Permission Screen
 
-3. **Upload the source code to your server**:
+Make sure these folders have read & write permissions. If not, then assign these folders read & write permissions.
 
-   - Begin by extracting the Source Code you acquired from CodeCanyon.
-   - Unpack the Admin Panel zip file and proceed to upload the PHP Code Folder's contents onto your Server.
+![Permission Screen](/img/panel/installation-steps/step-3.png)
 
-   :::caution Note
-   .htaccess file is essential; kindly verify its existence. If it is not visible, enable the option to display hidden files.
-   :::
+## 4. Purchase Code Validation
 
-   :::caution Note
-   Supported PHP version should be greater than or equal to 8.1
-   :::
+Here you'll have to insert the purchase code obtained from CodeCanyon to authenticate your purchase and authorize your server to access the services.
 
-4. **Run the installation wizard**:
-   - Now head to your project's URL (e.g., mydomain.com or subdomain.mydomain.com).
-   - The Installation screen will then walk you through the process seamlessly.
+To find your Purchase code you can visit this link: [Where is My Purchase code?](https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-)
 
-Great news! You're all set. To get started, open your admin panel URL in your browser (e.g., yourdomain.com or subdomain.yourdomain.com).
+![Purchase Code Validation](/img/panel/installation-steps/step-4.png)
 
-For reference, you can check out our demo panel at:
-[https://elitequiz.wrteam.me](https://elitequiz.wrteam.me)
+## 5. Database Configuration Screen
 
-**Default Login Details**  
-User: admin  
-Pass: admin123
+![Database Configuration](/img/panel/installation-steps/step-5.png)
 
-## Common Errors
+## 6. Database Connection Status
 
-### Admin Panel's Server Issues
+![Database Connection](/img/panel/installation-steps/step-6.png)
 
-#### Issue: ob_start() Error
+## 7. Final installation Screen
 
-You might see errors related to ob_start() function in PHP.
+If everything is configured successfully then your Admin panel has been installed successfully. You can login as Super Admin using the credentials provided here.
 
-#### Solution:
-
-Go to Admin panel's code root files -> index.php and write: `ob_start();` in new line after `<?php`
-
-![ob_start solution](/img/panel/ob_start.webp)
-
-You can also check the answer here:
-
-![ob_start solution (answer)](/img/panel/ob_start-ans.png)
+![Installation Complete](/img/panel/installation-steps/step-7.png)
+![Admin Login](/img/panel/installation-steps/step-8.png)
