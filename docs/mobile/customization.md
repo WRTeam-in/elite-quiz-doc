@@ -8,18 +8,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Customize the Elite Quiz App to match your brand identity and preferences.
 
-## Branding Structure
-
-We've organized all branding-related configurations and assets into separate folders, making it easy to modify them without missing anything. This structure also simplifies updating to newer app versions, as you only need to check for changes in the config files and update the folders.
-
-There are two primary folders for branding customization:
-
-1. **App Configuration** (`lib/core/config`): Contains settings for panel URL, default theme, messages, payment methods, and other app configurations.
-
-2. **Assets Configuration** (`assets/config`): Contains all images and assets related to branding, including sounds and profile avatar images you might want to customize.
-
-Beyond these folders, you're free to modify other assets and app code for additional flexibility. This separation makes rebranding the app straightforward for most users.
-
 ## Update App Launcher Icons
 
 We use the `flutter_launcher_icons` package to generate launcher icons for Android and iOS. This approach makes the process quick, easy, and reproducible—especially helpful for setup and app updates.
@@ -68,8 +56,9 @@ You can customize the app logo that appears in the Splash screen, Sign in/ Sign 
 
 1. Navigate to `assets/images/svg/` directory in your project.
 
-2. Update the following images.
+2. Update the following images:
    - `splash_logo.svg`: shown in the splash screen.
+   - `placeholder_logo.svg`: default placeholder logo shown across screens.
 
 3. Then rebuild the app to see the changes.
 
