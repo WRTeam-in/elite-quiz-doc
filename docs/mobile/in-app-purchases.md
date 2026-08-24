@@ -33,7 +33,7 @@ Subscriptions are not currently supported.
 - [ ] **Android**: Add package name to Admin Panel
 - [ ] **Android**: Add Firebase service account to Play Console with admin permissions
 - [ ] **Android**: Enable Google Play Android Developer API
-- [ ] **iOS**: Add App Store Connect shared secret to Admin Panel
+- [ ] **iOS**: Add App Store Connect API credentials (Issuer ID, Key ID, .p8 key) to Admin Panel
 - [ ] Create matching products in Play Console and App Store Connect with identical IDs
 - [ ] Upload app to testing tracks and test purchases
 
@@ -88,8 +88,10 @@ sequenceDiagram
 
 ## Step 1: Create Products in Admin Panel
 
-1. Open the Admin Panel and go to `Settings > Coin Store Settings`
-2. Create your coin packs and remove-ads product
+1. Open the Admin Panel and go to **General Management > Settings > Coin Package Settings**.
+2. Create your coin packs and remove-ads product.
+
+![Coin Package Settings](/img/app/coin_pack_settings.png)
 
 **Product Types:**
 
@@ -139,37 +141,15 @@ Before creating products in app stores, complete these platform-specific setup s
    - Example: `com.yourcompany.elitequiz`
    - This must match the package name in your Android app
 
-![Add Android Package name in In-App Settings](/img/panel/panel_iap_add_package_name.webp)
+![In-App Purchase Settings](/img/panel/in_app_purchase.png)
 
-#### Step 2: Connect Firebase to Play Console
+#### Step 2: Connect Firebase / Service Account to Play Console
 
 This allows the Admin Panel to verify purchases with Google Play.
 
-1. In Admin Panel, go to `Settings > In-App Settings`
-2. Copy the **Firebase Client Email** (shown in the settings)
-
-![Copy Client email from In-App Settings](/img/panel/panel_iap_copy_client_email.webp)
-
-3. Open [Google Play Console](https://play.google.com/console/u/0/developers/_/app-list)
-4. Go to `Users and permissions`
-5. Click `Invite new users`
-6. Paste the Firebase Client Email you copied
-7. In the `Permissions` section, click `Add App` under the `App permissions` tab
-8. Select your app and click `Apply`
-9. Select `Admin (all permissions)` and click `Apply`
-10. Click `Invite user`
-
-**Watch the video guide:**
-
-<iframe
-  width="100%"
-  height="500"
-  style={{ borderRadius: '10px', border: 'none' }}
-  src="https://www.youtube.com/embed/vfIiAUhwXrY"
-  title="Add Firebase Client Email to Play Console"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen>
-</iframe>
+:::tip Admin Panel Setup Reference
+For step-by-step instructions on finding your **Firebase Client Email** in the Admin Panel and granting it Admin permissions in Google Play Console (including the video walkthrough), see the [Admin Panel In-App Purchase Configuration](../admin/in-app-purchase-config#2-connect-firebase--service-account-to-play-console).
+:::
 
 #### ⏱️ Important: Wait Time Required
 
@@ -205,33 +185,18 @@ Most setups work within 4 hours.
 
 ### iOS Configuration
 
-#### Step 1: Get the Shared Secret from App Store Connect
-
-The shared secret allows the Admin Panel to verify iOS purchases with Apple.
-
-1. Open [App Store Connect](https://appstoreconnect.apple.com)
-2. Click on your app
-3. Go to `App Information` (in the left sidebar under `General`)
-4. Scroll down to the `App-Specific Shared Secret` section
-5. Click `Manage` or `Generate` if you don't have one yet
-6. Copy the shared secret code
-
-:::warning Use App-Specific Shared Secret
-Make sure you copy the **App-Specific Shared Secret**, not the Master Shared Secret. The app-specific version is more secure.
+:::tip Admin Panel Setup Reference
+For a complete guide on configuring App Store Connect API credentials (Issuer ID, Key ID, `.p8` Private Key, Bundle ID, and Sandbox/Production environment) in the Admin Panel, see the [Admin Panel In-App Purchase Configuration](../admin/in-app-purchase-config).
 :::
 
-#### Step 2: Add Shared Secret to Admin Panel
+#### Step 1: Configure App Store Connect API Credentials in Admin Panel
 
-1. Go to `Admin Panel > Settings > In-App Settings`
-2. Find the `iOS Shared Secret` field
-3. Paste the shared secret you copied from App Store Connect
-4. Click `Save`
+1. Log into [App Store Connect](https://appstoreconnect.apple.com) with an Admin role.
+2. Go to **Users and Access → Integrations → App Store Connect API**.
+3. Generate an **In-App Purchase** API Key and note down your **Issuer ID**, **Key ID**, and download the `.p8` Private Key file.
+4. Enter these credentials along with your **Bundle ID** in **Admin Panel > Settings > In-App Settings**.
 
-:::tip Double-Check for Errors
-Make sure there are no extra spaces at the beginning or end of the shared secret. Extra spaces will cause verification to fail.
-:::
-
-#### Step 3: Upload App to TestFlight
+#### Step 2: Upload App to TestFlight
 
 1. Build your iOS app in Xcode
 2. Upload to App Store Connect
@@ -410,7 +375,7 @@ This usually means the purchase verification failed. Check these in order:
 
    - **Android**: Is Firebase service account email added to Play Console with admin permissions?
    - **Android**: Is "Google Play Android Developer API" enabled in Google Cloud?
-   - **iOS**: Is the shared secret correctly added to Admin Panel?
+   - **iOS**: Are App Store Connect API credentials (Issuer ID, Key ID, .p8 key) correctly added in Admin Panel?
 
 2. **Check Network Connection**:
 
@@ -449,7 +414,7 @@ This usually means the purchase verification failed. Check these in order:
 3. Check that product status is "Active" in Play Console
 4. Verify package name matches between app and Admin Panel
 
-#### iOS: "Cannot connect to iTunes Store"
+#### iOS: "Cannot connect to App Store"
 
 **Common causes**:
 
@@ -465,16 +430,15 @@ This usually means the purchase verification failed. Check these in order:
 3. When prompted during purchase, sign in with sandbox tester account
 4. Make sure products are "Ready to Submit" or approved in App Store Connect
 
-#### iOS: Shared Secret errors
+#### iOS: App Store Connect API Verification Errors
 
 **Symptoms**: Purchases complete but verification fails
 
 **How to fix**:
 
-1. Go to App Store Connect → Your App → App Information
-2. Copy the **App-Specific Shared Secret** (not Master Shared Secret)
-3. Add it to Admin Panel under `Settings > In-App Settings`
-4. Make sure there are no extra spaces at the beginning or end
+1. Go to **App Store Connect → Users and Access → Integrations → App Store Connect API**
+2. Ensure your **Issuer ID**, **Key ID**, and `.p8` **Private Key** match the entries in Admin Panel under `Settings > In-App Settings`
+3. Verify that your `.p8` key contains the full text including `-----BEGIN PRIVATE KEY-----` and `-----END PRIVATE KEY-----`
 
 ### Remove Ads Purchase
 
