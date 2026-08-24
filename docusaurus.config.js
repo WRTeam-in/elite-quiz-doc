@@ -9,11 +9,11 @@ export default {
   title: 'Elite Quiz Documentation',
   tagline: 'Web & App',
   url: 'https://wrteam-in.github.io',
-  baseUrl: '/elite_quiz_doc',
+  baseUrl: '/elite-quiz-doc',
   onBrokenLinks: 'warn',
   favicon: 'img/favicon.svg',
   organizationName: 'WRTeam-in', // Usually your GitHub org/user name.
-  projectName: 'elite_quiz_doc', // Usually your repo name.
+  projectName: 'elite-quiz-doc', // Usually your repo name.
 
   // Custom fields for environment variables
   customFields: {
