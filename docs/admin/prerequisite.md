@@ -23,6 +23,7 @@ Before installing the Admin Panel, make sure your server meets the following req
   - `cURL`
   - `PCRE`
   - `PDO`
+  - `pdo_sqlite`
   - `pdo_mysql` / `nd_pdo_mysql`
   - `Session`
   - `XML`

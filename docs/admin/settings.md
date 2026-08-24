@@ -102,5 +102,5 @@ Configure how users can request cash payouts for their coins:
 ![Payment Settings](/img/panel/payment_settings.png)
 
 :::note
-Coins earned from Quiz/Battle rewards, badge unlocks, or contest prizes cannot be redeemed for payment — only coins acquired through other means are eligible.
+Coins earned from Quiz/Battle rewards, badge unlocks, or contest prizes are redeemable for payment; coins acquired through other means are not eligible for redemption.
 :::
