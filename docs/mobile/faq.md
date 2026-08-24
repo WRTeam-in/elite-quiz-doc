@@ -119,4 +119,4 @@ This is often due to code obfuscation or missing ProGuard rules. Make sure you'v
 If you encounter issues not covered in this documentation, please contact our support team through:
 
 - Email: support@wrteam.in
-- Skype: See the [Support](../support) section for Skype contacts
+- Microsoft Teams: See the [Support](../support) section for Teams contacts

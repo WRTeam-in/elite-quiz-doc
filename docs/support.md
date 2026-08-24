@@ -27,18 +27,21 @@ If you need additional help, our dedicated support team is available through mul
 
 - **Contact**: Priyansh Parmar
 - **Platform**: [Microsoft Teams](https://teams.live.com/l/invite/FEAog3ZODgiEtZhlQM)
+- **WhatsApp**: [+91 8849493106](https://wa.me/918849493106)
 - **Scope**: Mobile app setup, features, and troubleshooting
 
 #### Web Application Support
 
 - **Contact**: Mohan Dhila
 - **Platform**: [Microsoft Teams](https://teams.live.com/l/invite/FEAUrbWj96fM1Fmjww?v=g1)
+- **WhatsApp**: [+91 9265252395](https://wa.me/919265252395)
 - **Scope**: Web application setup, and issues
 
 #### Admin Panel Support
 
 - **Contact**: Meet Bhalodia
 - **Platform**: [Microsoft Teams](https://teams.live.com/l/invite/FEAwZ9xXVOMiEuNZQ?v=g1)
+- **WhatsApp**: [+91 6354522943](https://wa.me/916354522943)
 - **Scope**: Admin panel setup, configuration
 
 #### Email Support
@@ -51,7 +54,7 @@ If you need additional help, our dedicated support team is available through mul
 
 Our support team is available:
 
-- **Days**: Monday through Friday
+- **Days**: Monday to Friday
 - **Hours**: 9:00 AM to 6:00 PM IST (GMT +5:30)
 - **Location**: 🇮🇳 India (Asia)
 
@@ -61,7 +64,7 @@ To help us assist you more effectively, please include:
 
 1. **Purchase Information**
 
-   - Your purchase code (find your purchase code from this [guide](https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code) )
+   - Your purchase code (find your purchase code from this [guide](https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code))
    - Product version
    - Platform (Web/Mobile)
 
