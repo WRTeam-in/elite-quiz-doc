@@ -51,6 +51,7 @@ To help you get started quickly, we have created a video tutorial that guides yo
 6. This credentials should match with the credentials that you have set in admin panel. Otherwise it will not work properly:
 
    ![Admin Panel Config](../../static/img/web/addWeb4.png)
+   ![Admin Panel Config](../../static/img/web/firebase_setting.png)
 
 7. Configure domain in firebase console:
 

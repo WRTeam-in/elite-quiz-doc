@@ -21,7 +21,7 @@ To change the name:
 
 **To change logo, favicon, Firebase, footer data, quizplay images, etc:**
 
-1. Go to Admin Panel -> Web Settings -> Settings
+1. Go to Admin Panel -> Web & Brand Settings
 
 ![Web Settings](../../static/img/web/websettings.png)
 
@@ -35,7 +35,7 @@ To change the name:
 
 Note: Please set your favicon icon as `favicon.ico` name and format is only ico set. You can use this tool to convert image to ico: [Favicon Generator](https://www.favicon-generator.org/)
 
-1. Go to public folder -> favicon.ico
+1. Go to Admin Panel -> Web & Brand Settings 
 
 ![Favicon](../../static/img/web/favicon.png)
 
@@ -43,11 +43,12 @@ Note: Please set your favicon icon as `favicon.ico` name and format is only ico 
 
 To change the application colors:
 
-1. Add your colors in Admin Panel -> Web Settings -> Settings
+1. Add your colors in Admin Panel -> Web Settings 
 
-![Theme Colors](../../static/img/web/theme-color.webp)
+![Theme Colors](../../static/img/web/theme-color.png
+)
 
-2. To change dark mode primary color
+<!-- 2. To change dark mode primary color
 
 ![Dark Mode Primary Color](../../static/img/web/darkprimarycolor.png)
 
@@ -66,31 +67,31 @@ PWA is use for user can install your website as a app in mobile device or comput
 1. To change the PWA settings: Go to .env file
 
 
-![PWA Settings](../../static/img/web/pwa.png)
+![PWA Settings](../../static/img/web/pwa.png) -->
 
 ## Adding Slider on Homepage
 
 To add or modify sliders on the homepage:
 
-1. Go to admin panel -> web settings -> slider
+1. Go to admin panel -> web home settings
 
 ![Add Slider](../../static/img/web/addslider.png)
 
-## Adding Badge Images
+<!-- ## Adding Badge Images -->
 
-To add or modify badge images:
+<!-- To add or modify badge images:
 
 1. Go to admin panel -> Settings -> Badges Settings
 
-![Add Badges](../../static/img/web/badges.png)
+![Add Badges](../../static/img/web/badges.png) -->
 
-## RTL Support (Right-to-Left)
+<!-- ## RTL Support (Right-to-Left)
 
 To enable RTL support for languages like Arabic or Hebrew:
 
 1. Go to Admin Panel -> System Languages
 
-![RTL Settings](../../static/img/web/rtl.webp)
+![RTL Settings](../../static/img/web/rtl.webp) -->
 
 ## Setting Domain URL
 
@@ -100,7 +101,7 @@ To set the Domain URL:
 
 ![Domain URL](../../static/img/web/domainUrl.png)
 
-## Configuring Sitemap
+<!-- ## Configuring Sitemap
 
 To configure the sitemap for better SEO:
 
@@ -130,9 +131,9 @@ To configure the sitemap for better SEO:
 
 ## Changing Timer Settings
 
-To adjust the timer and other features settings:
+To adjust the timer and other features settings: -->
 
-1. Go to Admin Panel -> Settings -> System Utilities
+1. Go to Admin Panel ->  System Utilities
 
 ![System Utilities](../../static/img/web/system-utilites.png)
 
@@ -140,17 +141,17 @@ To adjust the timer and other features settings:
 
 To disable specific sections on the homepage:
 
-1. Go to Admin Panel -> Web Settings -> Home Settings
+1. Go to Admin Panel -> Web Settings -> Web Home Settings
 
-![Home Sections](../../static/img/web/home-sections.webp)
+![Add Slider](../../static/img/web/addslider.png)
 
 ## Score Configuration
 
-To configure scoring:
+<!-- To configure scoring:
 
 1. Go to Admin Panel -> Settings -> System Utilities
 
-![Score Configuration](../../static/img/web/score-add.png)
+![Score Configuration](../../static/img/web/score-add.png) -->
 
 ## Adding Google AdSense
 
@@ -165,7 +166,7 @@ To add Google AdSense to your application:
 
 ![AdSense Site](../../static/img/web/adsensesite.png)
 
-4. Copy the script code and paste it to your src -> pages -> \_document.js
+4. Copy the last code of the screen and paste that in .env file's NEXT_PUBLIC_DATA_AD_CLIENT variable
 
 ![First Verify](../../static/img/web/first_verify.png)
 ![Script HTML](../../static/img/web/scripthtml.png)

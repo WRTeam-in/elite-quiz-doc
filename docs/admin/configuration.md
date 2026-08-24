@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 7
 ---
 
 # Admin Panel Configuration
@@ -11,13 +11,12 @@ After installing the Elite Quiz Admin Panel, you'll need to configure it to matc
 ### General Settings
 
 1. Log in to your Admin Panel
-2. Navigate to **Profile**
-3. Configure the following settings:
+2. Configure the following settings: from Admin Panel -> settings -> Web & Brand Settings
    - Application Name
-   - Logo
+   - Logo, color
    - Robot Image
    - Admin Panel Login Background Image
-4. Click **Save Changes** to apply your settings
+3. Click **Save Changes** to apply your settings
 
 ## Firebase Configuration
 
@@ -25,29 +24,25 @@ After installing the Elite Quiz Admin Panel, you'll need to configure it to matc
 
 1. **Create Firebase Database**:
 
-   ![Create Firebase Database](/img/panel/firebase_create_database.webp)
+   ![Create Firebase Database](/img/panel/firebase_create_database.png)
 
 2. **Select Database Location**:
 
-   ![Select Database Location](/img/panel/firebase_select_database_location.webp)
+   ![Select Database Location](/img/panel/firebase_select_database_location.png)
 
 3. **Set Up Battle Rules**:
 
-   ![Battle Rules](/img/panel/firebase_battle_rules.webp)
+   ![Battle Rules](/img/panel/firebase_battle_rules.png)
 
-4. **Configure Battle Index**:
-
-   ![Battle Index](/img/panel/firebase_battle_index.webp)
-
-5. **Download Services JSON**:
+4. **Download Services JSON**:
 
    ![Download Services JSON](/img/panel/download_services_json.webp)
 
-6. **Upload Services JSON**:
+5. **Upload Services JSON**:
 
-   ![Upload Services JSON](/img/panel/upload_services_json.webp)
+   ![Upload Services JSON](/img/panel/upload_services_json.png)
 
-7. **Verify Google Play Android Developer API is Enabled**:
+6. **Verify Google Play Android Developer API is Enabled**:
 
    ![Google Console Verify](/img/panel/google_console_verify_play_android_developer_api_is_enabled.webp)
 
@@ -55,19 +50,9 @@ After installing the Elite Quiz Admin Panel, you'll need to configure it to matc
 
 Configure authentication methods for your application:
 
-![Authentication Settings](/img/panel/authentication_settings.webp)
+- **Login Types:** Toggle which sign-in methods — Google, Email, Phone, and Apple — are enabled for users in the app.
 
-## Configuration Files
-
-For advanced users, you can directly edit configuration files in the server:
-
-1. Main configuration file: `config/app.php`
-2. Environment settings: `.env` file
-3. Database configuration: `config/database.php`
-
-:::caution
-Direct editing of configuration files should only be done by experienced developers. Always back up your files before making changes.
-:::
+![Authentication Settings](/img/panel/authentication_settings.png)
 
 # System Configurations
 
@@ -75,9 +60,9 @@ This section explains how to configure the Elite Quiz system settings for optima
 
 ## Profile Settings
 
-Change the Quiz name and logo in the Profile menu:
+Change the User Name, Email, avatar and credentails in the Profile menu:
 
-![Profile Settings](/img/panel/profile.webp)
+![Profile Settings](/img/panel/profile.png)
 
 ## System Settings
 
@@ -85,20 +70,14 @@ From the System Configurations screen, you can set:
 
 - System & App Timezone
 - App Play store or market place Links
-- Enable/Disable Answer Display
-- Language Mode
+- Content Mode (previously: Language Mode)
 - Option E Mode
 - Force Update App
-- Daily Quiz Mode
-- Contest Mode
-- Battle Random Category Mode
-- Battle Group Category Mode
 - In App Purchase
 - App Version
 - Shareapp Text
-- Fix Question in level
 
-![System Configurations](/img/panel/system-configurations.webp)
+![System Configurations](/img/panel/system-configuration.png)
 
 ### Configuration Settings Explained
 
@@ -112,27 +91,29 @@ From the System Configurations screen, you can set:
 
 - **Force Update:** If you want to require users to update the app to latest version. you can enable force update and add the **Android/IOS App Version** if app has given version it will show force update dialog to those users.
 
-- **True/False Values:** When Creating True False Question these values will be added as default values, then you can also edit them.
-
 - **Share App Text:** sharing the app will share this text.
 
 - **App Maintenance:** When you are working on the admin panel or apps Maintenance, you can enable this option so it will show users that app is in Maintenance Mode.
 
-- **Language Mode:** If you want to only use one language in the app you can disable this option. if you want to add multiple languages enable this feature.
+- **Content Mode (Previously: Language Mode):** If you want to only use one language in the app you can disable this option. if you want to add multiple languages enable this feature.
 
 - **Option E:** If you want 5 options for the answer you can enable this option. otherwise there will be 4 options to select from for answer.
 
-- **Daily Quiz/Contest Mode:** Toggle Daily Quiz/Contest feature functionality
-
-- **In App Purchase:** This option controls 'Coin Store' functionality in the app. if you disable this feature user won't be able to purchase coins.
-
 ## Quiz-Specific Settings
 
-Additionally, you can change quiz specific settings from System Utilities:
+Additionally, you can change quiz specific settings from System Utilities. This section includes settings for General Configs, Battle modules, Self Challenge, and True/False Quiz. You'll find the Quiz-Specific Settings menu available below the **Quiz** menu in the admin panel sidebar:
 
-![System Utilities 1](/img/panel/system_utilities.webp)
+![System Utilities 1](/img/panel/system_utilities_setting_preview.png)
+
+- **Enable/Disable Answer Display:** Controls whether players see answer feedback after answering:
+
+  - **Show Answer Correctness** — marks correct/incorrect only
+  - **Don't Show Answer Correctness** — no feedback shown
+  - **Show Answer Correctness and Correct Answer** — marks correct/incorrect and reveals the correct answer
 
 - **Visible Mode:** Controls visibility of the feature. if you want to disable any particular quiz you can disable this option for that quiz.
+
+- **Category Mode:** This mode that lets users select and play a battle by choosing their preferred category, instead of random questions.
 
 - **Fix Questions:** if disabled all the questions of category/subcategory or level will be fetched for user to play. otherwise you can limit the no of question randomly fetched from many.
 
@@ -142,8 +123,15 @@ Additionally, you can change quiz specific settings from System Utilities:
 
 - **Wrong Answer Deduct Score:** for each wrong answer this amount of score is deducted.
 
-![System Utilities 2](/img/panel/system_utilities.webp)
+![System Utilities 2](/img/panel/system_utilities_setting.png)
 
-- **Extra Scores:** given in battles, when user answers correctly and quickly, if user correctly answers in 2 seconds they get extra score from quickest answer score, and if they answer in 4 seconds they get extra score from second quickest answer score.
+- **Extra Scores:** Award bonus points in battles for fast correct answers, configured using four fields:
+
+  - **Answer within (seconds) to earn the quickest bonus**
+  - **Extra score for quickest correct answer**
+  - **Answer within (seconds) to earn the second quickest bonus**
+  - **Extra score for second quickest correct answer**
+
+  For example, if the time thresholds are set to 2 and 4 seconds respectively, a user who answers correctly within 2 seconds earns the "quickest correct answer" bonus score, and a user who answers correctly within 4 seconds earns the "second quickest correct answer" bonus score.
 
 - **Opponent Search Duration:** For Random Battle, it will search for opponent for this duration.

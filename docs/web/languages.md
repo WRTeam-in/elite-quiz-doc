@@ -8,33 +8,33 @@ Elite Quiz provides robust multilingual support. This page explains how to manag
 
 ## Manage System Languages (Translations)
 
-To manage and add system translations, you can go to System Languages setting:
+To manage and add system translations, you can go to Languages:
 
 ![System Languages](../../static/img/web/system-languages.png)
 
 To make a language the default, you can edit the language. When a user opens the app for the first time, the default language will be selected. After that, users can select any other available language.
 
-![Edit System Language](../../static/img/web/edit-system-language.webp)
+![Edit System Language](../../static/img/web/edit-system-language.png)
 
-## How to change the web language labels
+<!-- ## How to change the web language labels
 
 To manage and add system translations, you can go to System Languages and select the web and click on eye icon:
 
-![Admin Language Lables of Web](../../static/img/web/edit-language-labels.webp)
+![Admin Language Lables of Web](../../static/img/web/edit-language-labels.webp) -->
 
 ## Manage Quiz Language
 
 Quiz Language refers to the language of the questions and quiz content, not the translations or labels of the app. If you want to have content in multiple languages, this feature will be useful for you.
 
-1. If you want to have multiple languages for the quiz content, enable Content Type mode in your admin panel under **General Management** -> **Settings** -> **System Configurations** -> **Quiz Mode**.
+1. If you want to have multiple languages for the quiz content, enable language mode in your admin panel as shown in the image below. Otherwise, keep it disabled.
 
-   ![Enable Content Type Mode](/img/app/enable_content_type.png)
+   ![Admin Language Setting](../../static/img/app/admin-language-1.png)
 
 2. Then you can Add/Manage quiz languages from the Languages Section. Skip this step if language mode is disabled.
 
-   ![Manage Quiz Languages](../../static/img/panel/manage_quiz_languages.webp)
+   ![Manage Quiz Languages](../../static/img/panel/manage_quiz_languages.png)
 
-## RTL Support
+<!-- ## RTL Support
 
 For languages that read from right to left (like Arabic or Hebrew), you can enable RTL support:
 
@@ -42,7 +42,7 @@ For languages that read from right to left (like Arabic or Hebrew), you can enab
 2. Edit the language you want to set as RTL
 3. Toggle the RTL option to enable it
 
-![RTL Settings](../../static/img/web/rtl.webp)
+![RTL Settings](../../static/img/web/rtl.webp) -->
 
 ## Front-end Language Switching
 

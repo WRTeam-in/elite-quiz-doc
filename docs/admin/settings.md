@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 8
 ---
 
 # Settings
@@ -38,7 +38,7 @@ You can set and manage your How to Play (instructions) content for the app:
 
 Use the **AI Settings** screen to connect your AI Question Bank to either Gemini or OpenAI. Entering the wrong model code or API key will break question generation, so double-check every field before you click **Submit**.
 
-![AI Settings](/img/panel/ai_setting.webp)
+![AI Settings](/img/panel/ai_setting.png)
 
 ### Step 1: Choose an AI Provider
 
@@ -87,3 +87,20 @@ Each provider needs its own API key. Keys are secret—store them in a secure pa
 3. Copy the key once it appears (you will not see it again) and paste it into the **AI API Key** box.
 
 After adding the provider, model code, and API key, click **Submit**. Run a quick test generation to confirm the connection before moving on.
+
+## Payment Settings
+
+Configure how users can request cash payouts for their coins:
+
+- **Payment Enable/Disable:** Turn the coin redemption/payout feature on or off for users.
+- **Per Coin:** The number of coins that make up one redeemable unit.
+- **Per Amount:** The payout amount for each "Per Coin" unit — e.g., 10 coins = 1 unit of the amount below.
+- **Currency Symbol:** The currency symbol displayed alongside payout amounts (e.g., `$`).
+- **Minimum Coins for Request:** The minimum coin balance a user must have before submitting a payout request.
+- **Difference in Hours Between Consecutive Payment Request:** The minimum wait time, in hours, a user must wait between two payment requests.
+
+![Payment Settings](/img/panel/payment_settings.png)
+
+:::note
+Coins earned from Quiz/Battle rewards, badge unlocks, or contest prizes cannot be redeemed for payment — only coins acquired through other means are eligible.
+:::

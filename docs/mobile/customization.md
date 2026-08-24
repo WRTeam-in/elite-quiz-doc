@@ -2,9 +2,23 @@
 sidebar_position: 5
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # App Customization
 
 Customize the Elite Quiz App to match your brand identity and preferences.
+
+## Branding Structure
+
+We've organized all branding-related configurations and assets into separate folders, making it easy to modify them without missing anything. This structure also simplifies updating to newer app versions, as you only need to check for changes in the config files and update the folders.
+
+There are two primary folders for branding customization:
+
+1. **App Configuration** (`lib/core/config`): Contains settings for panel URL, default theme, messages, payment methods, and other app configurations.
+
+2. **Assets Configuration** (`assets/config`): Contains all images and assets related to branding, including sounds and profile avatar images you might want to customize.
+
+Beyond these folders, you're free to modify other assets and app code for additional flexibility. This separation makes rebranding the app straightforward for most users.
 
 ## Update App Launcher Icons
 
@@ -74,6 +88,17 @@ Navigate to `lib/commons/utils/color_tokens.dart` and update the color constants
   static final purple = ColorShades(const Color(0xFF8A56F2));  // Accent purple color (#8A56F2)
   static final blue = ColorShades(const Color(0xFF2093FC));    // Accent blue color (#2093FC)
   static final yellow = ColorShades(const Color(0xFFD5A400));  // Accent yellow color (#D5A400)
+Navigate to `lib/core/config/colors.dart` and update the color constants with your brand colors:
+
+```dart title='lib/core/config/colors.dart'
+/// Light Theme Colors
+const klBackgroundColor = Color(0xffffffff); // White color for containers, cards, lists
+const klCanvasColor = Color(0xcc000000); // Black color for overlays
+const klPageBackgroundColor = Color(0xfff3f7fa); // Main scaffold background color
+const klPrimaryColor = Color(0xffef5388); // Primary branding color
+const klPrimaryTextColor = Color(0xff45536d); // Main text color
+
+/// Additional theme colors available in the file
 ```
 
 Save the file and restart your app to see the changes

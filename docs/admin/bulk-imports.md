@@ -1,11 +1,15 @@
 ---
-sidebar_position: 8
+sidebar_position: 11
 ---
 
 # Bulk Import Questions
 
 :::tip
 The Import Questions feature lets you upload multiple questions at once using CSV or Excel files. This saves time when creating large question banks for your quizzes.
+:::
+
+:::note Import Processing
+Bulk imports are processed through a **queue**. You'll be notified once processing completes, along with a summary of successfully imported questions and any failed imports. Failed import records are automatically purged after 7 days.
 :::
 
 ## Before You Start
@@ -35,13 +39,16 @@ If you're using non-English text, follow these steps to ensure proper encoding:
 
 Standard multiple-choice questions with single correct answers, supporting both regular and true/false formats.
 
+:::info Category & Content Type Relationship
+You won't find a `content_type_id` column in the import template — it's not something you provide directly. Instead, it's derived automatically from the `category` you specify, since each category is directly linked to a specific content type (Quiz Zone, Multi Match, Contest, etc.) in the system. Selecting the correct category automatically assigns the matching content type to the imported questions.
+:::
+
 ### Required Columns
 
 | Column          | Description             | Example Values                              |
 | --------------- | ----------------------- | ------------------------------------------- |
 | `category`      | Category ID (number)    | `63`                                        |
 | `subcategory`   | Subcategory ID (number) | `97`                                        |
-| `language_id`   | Language ID (number)    | `1` for English, `2` for other              |
 | `question_type` | Question format         | `1` for multiple choice, `2` for true/false |
 | `question`      | Question text           | `"What is the capital of France?"`          |
 | `option 1`      | First option            | `"Paris"` or `"True"`                       |
@@ -56,25 +63,25 @@ Standard multiple-choice questions with single correct answers, supporting both 
 ### Sample Data Format
 
 ```csv
-category,subcategory,language_id,question_type,question,option 1,option 2,option 3,option 4,option 5,answer,level,note
-63,97,2,1,What is the capital of France?,Paris,London,Berlin,Madrid,,a,1,Geography basics
-63,97,1,2,Is water H2O?,True,False,,,,a,2,Chemistry fact
+category,subcategory,question_type,question,option 1,option 2,option 3,option 4,option 5,answer,level,note
+63,97,1,What is the capital of France?,Paris,London,Berlin,Madrid,,a,1,Geography basics
+63,97,2,Is water H2O?,True,False,,,,a,2,Chemistry fact
 ```
 
 ### Multiple Choice Example
 
 ```csv
-category,subcategory,language_id,question_type,question,option 1,option 2,option 3,option 4,option 5,answer,level,note
-63,97,1,1,Which planet is closest to the Sun?,Mercury,Venus,Earth,Mars,,a,1,Solar system
-63,97,1,1,What is 5 × 7?,30,35,40,45,,b,2,Basic math
+category,subcategory,question_type,question,option 1,option 2,option 3,option 4,option 5,answer,level,note
+63,97,1,Which planet is closest to the Sun?,Mercury,Venus,Earth,Mars,,a,1,Solar system
+63,97,1,What is 5 × 7?,30,35,40,45,,b,2,Basic math
 ```
 
 ### True/False Example
 
 ```csv
-category,subcategory,language_id,question_type,question,option 1,option 2,option 3,option 4,option 5,answer,level,note
-63,97,1,2,The Earth is flat,True,False,,,,b,1,Basic science
-63,97,1,2,Water boils at 100°C,True,False,,,,a,1,Physics
+category,subcategory,question_type,question,option 1,option 2,option 3,option 4,option 5,answer,level,note
+63,97,2,The Earth is flat,True,False,,,,b,1,Basic science
+63,97,2,Water boils at 100°C,True,False,,,,a,1,Physics
 ```
 
 ---
@@ -89,11 +96,10 @@ Matching questions where users connect left items to right items. Supports multi
 | ------------------------ | ---------------- | ------------------------------------------- |
 | `category`               | Category ID      | `63`                                        |
 | `subcategory`            | Subcategory ID   | `97`                                        |
-| `language_id`            | Language ID      | `1`, `2`, etc.                              |
 | `question_type`          | Question format  | `1` for multiple choice, `2` for true/false |
+| `answer_type`            | Answer format    | `1` for sequence, `2` for multi-select      |
 | `question`               | Question text    | `"Match countries to capitals"`             |
 | `option 1` to `option 5` | Answer options   | Various options                             |
-| `answer_type`            | Answer format    | `1` for multi-select, `2` for sequence      |
 | `answer1` to `answer5`   | Correct answers  | `"a"`, `"b"`, `"c"`, etc.                   |
 | `level`                  | Difficulty level | `1`, `2`, `3`                               |
 | `note`                   | Additional notes | Optional                                    |
@@ -101,13 +107,13 @@ Matching questions where users connect left items to right items. Supports multi
 ### Sample Format
 
 ```csv
-category,subcategory,language_id,question_type,question,option 1,option 2,option 3,option 4,option 5,answer_type,answer1,answer2,answer3,answer4,answer5,level,note
-63,97,2,1,Match elements to symbols,Hydrogen,Carbon,Oxygen,Nitrogen,,1,a,c,b,d,,1,Chemistry matching
+category,subcategory,question_type,answer_type,question,option 1,option 2,option 3,option 4,option 5,answer1,answer2,answer3,answer4,answer5,level,note
+63,97,1,1,Match elements to symbols,Hydrogen,Carbon,Oxygen,Nitrogen,,a,c,b,d,,1,Chemistry matching
 ```
 
----
+<!-- ---
 
-## Exam Questions
+ ## Exam Questions
 
 Questions designed for formal examinations with specific marking schemes.
 
@@ -130,7 +136,7 @@ exam_module_id,mark,question_type,question,option 1,option 2,option 3,option 4,o
 1,2,2,Energy cannot be created or destroyed,True,False,,,,a
 ```
 
----
+--- -->
 
 ## Contest Questions
 
@@ -141,6 +147,7 @@ Questions for timed contests and competitions.
 | Column                   | Description            | Values                                      |
 | ------------------------ | ---------------------- | ------------------------------------------- |
 | `contest_id`             | Contest identifier     | `1`, `2`, etc.                              |
+| `content_type_id`        | Content_id identifier  | `1`, `2`, etc.                              |
 | `question_type`          | Question format        | `1` for multiple choice, `2` for true/false |
 | `question`               | Question text          | Full question                               |
 | `option 1` to `option 5` | Answer choices         | Various options                             |
@@ -150,9 +157,9 @@ Questions for timed contests and competitions.
 ### Sample Format
 
 ```csv
-contest_id,question_type,question,option 1,option 2,option 3,option 4,option 5,answer,note
-2,1,Which is the largest ocean?,Atlantic,Pacific,Indian,Arctic,,b,Geography contest
-1,2,Mount Everest is the tallest mountain,True,False,,,,a,Physical geography
+contest_id,content_type_id,question_type,question,option 1,option 2,option 3,option 4,option 5,answer,note
+2,1,1,Which is the largest ocean?,Atlantic,Pacific,Indian,Arctic,,b,Geography contest
+1,2,2,Mount Everest is the tallest mountain,True,False,,,,a,Physical geography
 ```
 
 ---
@@ -189,7 +196,6 @@ contest_id,question_type,question,option 1,option 2,option 3,option 4,option 5,a
 - Categories and subcategories must exist in your system before importing questions
 - Option 5 is only available if enabled in System Settings
 - Question types determine which options are required (true/false uses only options 1-2)
-- Language IDs correspond to your system's configured languages
   :::
 
 ---

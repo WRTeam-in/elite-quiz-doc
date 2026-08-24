@@ -30,7 +30,7 @@ This is where you'll find the following configuration options:
 - **Quiz Winning Percentage** - Minimum accuracy required to win and earn coins
 - **Max Coins Winning Percentage** - Percentage required to earn the full reward (set to 100% for linear distribution)
 
-![Admin Panel System Utilities Settings](/img/panel/system_utilities.webp)
+![Admin Panel System Utilities Settings](/img/panel/system_utilities_setting.png)
 
 ---
 
