@@ -58,20 +58,20 @@ Maintaining an up-to-date app version is *crucial* for releases and subsequent u
 
 To establish a connection between your app and your Admin Panel:
 
-1.  Open `lib/core/api/api_endpoints_constants.dart` within your project.
-2.  Locate the `baseUrl` constant and **update it with the URL of your Admin Panel**:
+1.  Open `lib/core/constants/constants.dart` within your project.
+2.  Locate the `kBaseUrl` constant and **update it with the URL of your Admin Panel**:
     ```dart
     /// Add your panel url here
     // NOTE: Do not add '/' at the end of the URL
     // NOTE: Check if your admin panel uses http or https
-    static const String baseUrl = 'https://your-admin-panel-url.com';
+    const String kBaseUrl = 'https://your-admin-panel-url.com';
     ```
 
 ## Other Configurations
 
 The `lib/core/constants/constants.dart` file also contains **additional configurable settings**. These include:
 
-  * Phone Login Settings: Configure the default country code phone numbers during login.
+  * Phone Login Settings: Configure the default country code and maximum phone number length during phone login.
 
 
 Examples of these configurations are provided below:
@@ -80,6 +80,8 @@ Examples of these configurations are provided below:
 // Default country dial code preselected in the phone login.
 const String kDefaultCountryCode = '+91';
 
+// Maximum length allowed for phone number inputs.
+const int kMaxPhoneNumberLength = 16;
 ```
 
 ## What’s Next?
