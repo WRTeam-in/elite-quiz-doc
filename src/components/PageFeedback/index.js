@@ -151,7 +151,7 @@ export default function PageFeedback() {
   };
 
   // Don't render on homepage or non-doc pages
-  if (typeof window !== 'undefined' && (pagePath === '/' || pagePath === '/elite_quiz_doc/' || pagePath === '/elite_quiz_doc')) {
+  if (typeof window !== 'undefined' && (pagePath === '/' || pagePath === '/elite-quiz-doc/' || pagePath === '/elite-quiz-doc')) {
     return null;
   }
 

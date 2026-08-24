@@ -13,11 +13,11 @@
 ```javascript
 // Monitor all gtag events
 const originalGtag = window.gtag;
-window.gtag = function(...args) {
+window.gtag = function (...args) {
   console.log('📊 GA4 Event Captured:', {
     command: args[0],
     eventName: args[1],
-    parameters: args[2]
+    parameters: args[2],
   });
   return originalGtag.apply(this, args);
 };
@@ -63,11 +63,13 @@ window.gtag = function(...args) {
 **Enable Debug Mode:**
 
 Add this to your browser console:
+
 ```javascript
 localStorage.setItem('gtag-debug', 'true');
 ```
 
 Then:
+
 1. Go to Google Analytics → **Admin** → **DebugView**
 2. Submit feedback on your site
 3. Events will appear in real-time with full details
@@ -79,6 +81,7 @@ Then:
 ### ⚠️ Important: Localhost Events Won't Show
 
 **Events submitted on `localhost:3000` will NOT appear in GA4** because:
+
 - GA4 filters out localhost traffic by default
 - You need to deploy to production first
 
@@ -94,7 +97,7 @@ USE_SSH=true bun run deploy
 GIT_USER=<username> bun run deploy
 ```
 
-Your site will be live at: `https://wrteam-in.github.io/elite_quiz_doc/`
+Your site will be live at: `https://wrteam-in.github.io/elite-quiz-doc/`
 
 ### Step 2: View Real-Time Events
 
@@ -109,6 +112,7 @@ Your site will be live at: `https://wrteam-in.github.io/elite_quiz_doc/`
 ### Step 3: View Historical Events (After 24-48 hours)
 
 #### Basic Events Report
+
 1. **Reports** → **Engagement** → **Events**
 2. Find `page_feedback` in the list
 3. Click on it to see:
@@ -117,6 +121,7 @@ Your site will be live at: `https://wrteam-in.github.io/elite_quiz_doc/`
    - Event count per user
 
 #### Detailed Event Parameters
+
 1. **Reports** → **Engagement** → **Events** → `page_feedback`
 2. Click **View event details**
 3. You'll see all parameters:
@@ -134,10 +139,10 @@ To filter and segment feedback by rating or page:
 2. Click **Create custom dimension**
 3. Create these dimensions:
 
-| Dimension Name | Event Parameter | Scope |
-|---------------|-----------------|-------|
-| Feedback Rating | `rating` | Event |
-| Feedback Page | `page_path` | Event |
+| Dimension Name   | Event Parameter    | Scope |
+| ---------------- | ------------------ | ----- |
+| Feedback Rating  | `rating`           | Event |
+| Feedback Page    | `page_path`        | Event |
 | Feedback Comment | `feedback_comment` | Event |
 
 4. After 24 hours, go to **Reports** → **Explore**
@@ -173,6 +178,7 @@ To filter and segment feedback by rating or page:
 ## Event Structure Reference
 
 ### Event 1: `page_feedback_rating_selected`
+
 Fired when user clicks an emoji (before submitting)
 
 ```javascript
@@ -185,6 +191,7 @@ Fired when user clicks an emoji (before submitting)
 ```
 
 ### Event 2: `page_feedback`
+
 Fired when user submits feedback (with or without comment)
 
 ```javascript
@@ -205,25 +212,30 @@ Fired when user submits feedback (with or without comment)
 ### Events Not Showing in GA4?
 
 **1. Check if gtag is loaded:**
+
 ```javascript
 console.log(typeof window.gtag); // Should be "function"
 ```
 
 **2. Check tracking ID:**
+
 ```javascript
 // Should see G-CS432E2TJ6 in page source
-document.documentElement.innerHTML.includes('G-CS432E2TJ6')
+document.documentElement.innerHTML.includes('G-CS432E2TJ6');
 ```
 
 **3. Verify you're on production:**
+
 - Localhost events are filtered by GA4
-- Use your live site: `https://wrteam-in.github.io/elite_quiz_doc/`
+- Use your live site: `https://wrteam-in.github.io/elite-quiz-doc/`
 
 **4. Wait for data processing:**
+
 - Real-time: Appears within seconds
 - Reports: Takes 24-48 hours to fully process
 
 **5. Check browser extensions:**
+
 - Ad blockers may block Google Analytics
 - Try in incognito mode
 
@@ -287,6 +299,7 @@ You can also export GA4 data to Google Sheets for easier analysis:
 ## Need Help?
 
 If events still aren't showing:
+
 1. Check browser console for JavaScript errors
 2. Verify GA4 tracking ID in `docusaurus.config.js`
 3. Test on production site (not localhost)
