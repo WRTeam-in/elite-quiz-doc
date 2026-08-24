@@ -145,9 +145,9 @@ To disable specific sections on the homepage:
 
 ![Add Slider](../../static/img/web/addslider.png)
 
-## Score Configuration
+<!-- ## Score Configuration
 
-<!-- To configure scoring:
+To configure scoring:
 
 1. Go to Admin Panel -> Settings -> System Utilities
 
