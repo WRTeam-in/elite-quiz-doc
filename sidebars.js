@@ -41,6 +41,7 @@ export default {
         'admin/legacy-data-migration',
         'admin/configuration',
         'admin/settings',
+        'admin/in-app-purchase-config',
         'admin/system-language',
         'admin/bulk-imports',
       ],
