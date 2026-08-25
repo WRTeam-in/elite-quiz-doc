@@ -9,6 +9,7 @@ Before installing the Admin Panel, make sure your server meets the following req
 ## System Requirements
 
 - **PHP Version:** PHP version **8.3 or higher** (PHP **8.3+** required for version `3.0.0` and above).
+- **MySQL Version:** MySQL **8.0 or higher**.
 - **Required PHP Extensions:**
 
   - `Ctype`
