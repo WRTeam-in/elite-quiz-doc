@@ -21,13 +21,13 @@ Choose one of the following methods based on your server configuration:
 #### Method 1: Using CURL (If CURL is installed)
 
 ```bash
-curl -s "https://your-domain.com/run-scheduler" > /dev/null 2>&1
+curl -s "https://your-domain.com/schedule-run" > /dev/null 2>&1
 ```
 
 #### Method 2: Using WGET (If CURL is not installed)
 
 ```bash
-wget -q "https://your-domain.com/run-scheduler" > /dev/null 2>&1
+wget -q "https://your-domain.com/schedule-run" > /dev/null 2>&1
 ```
 
 #### Method 3: Using PHP Command (If URL scheduler is not working)
