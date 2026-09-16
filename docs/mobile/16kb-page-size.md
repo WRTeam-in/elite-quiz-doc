@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Google Play requires all new apps and updates targeting Android 15+ devices to support 16 KB page sizes starting November 1, 2025.
 
-### At a glance
+## At a glance
 
 - **Required for:** Elite Quiz **v2.3.5 and earlier** (when publishing to Android 15+)
 - **Not required for:** **v2.3.6+** (coming soon; includes 16 KB support out of the box)
