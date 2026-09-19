@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CS432E2TJ6"></script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-CS432E2TJ6",{anonymize_ip:!0})</script><link rel="stylesheet" href="/elite-quiz-doc/assets/css/styles.1484aa78.css">
-<script src="/elite-quiz-doc/assets/js/runtime~main.7e4e2e5e.js" defer="defer"></script>
+<script src="/elite-quiz-doc/assets/js/runtime~main.b1168e3d.js" defer="defer"></script>
 <script src="/elite-quiz-doc/assets/js/main.ba39ef0b.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -35,9 +35,7 @@
 <p><strong>Don&#x27;t use the old admin panel&#x27;s System Updater for version 3.0.0 and above.</strong> Version 3.0.0 is the new Laravel-based admin panel, not a regular CodeIgniter update — the old panel&#x27;s built-in System Updater can&#x27;t perform this switch. Use this Legacy Data Migration tool instead.</p>
 </li>
 <li class="">
-<p><strong>Export your old database as a <code>.sql</code> file</strong> using a tool like phpMyAdmin or <code>mysqldump</code>. The uploaded file can be up to <strong>200MB</strong>.</p>
-<p>The easiest way to do this is from within the old admin panel itself — use the <strong>Backup Data</strong> menu in its sidebar to export your database directly:</p>
-<p><img decoding="async" loading="lazy" alt="Backup Data in Old Admin Panel" src="/elite-quiz-doc/assets/images/ci_panel_backup_data-fea1eb8ddc77daa98def24a7dc9d7105.png" width="1864" height="926" class="img_ev3q"></p>
+<p><strong>Export your old database as a <code>.sql</code> file</strong> using a tool like <strong>phpMyAdmin</strong>. The uploaded file can be up to <strong>200MB</strong>.</p>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Don&#x27;t use Backup Data for assets</div><div class="admonitionContent_BuS1"><p>The <strong>Backup Data</strong> menu can also export your asset files (images, audio, badge icons, etc.) — but avoid using it for that.</p><ul>
 <li class=""><strong>Why:</strong> If your assets folder is large (1.5GB or more), exporting it this way can hit your server&#x27;s PHP memory limit and fail.</li>
 <li class=""><strong>Instead:</strong> Manually zip your assets folder — you&#x27;ll upload and extract it in <a href="#how-to-migrate-your-data" class="">step 2</a> below.</li>
