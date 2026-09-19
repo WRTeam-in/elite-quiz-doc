@@ -38,8 +38,17 @@ It's a **one-time, Super Admin-only** action, found at **General Management → 
 
 ## How to Migrate Your Data
 
+import Video from '@site/src/components/Video';
+
+**Watch the video walkthrough:**
+
+<Video src="https://www.youtube.com/embed/Ipym0MXG36g" title="Elite Quiz Legacy Data Migration" />
+
 1. Export your old (CodeIgniter 3) database as a `.sql` file, go to **General Management → Data Migration** in the new admin panel, click **Upload & Migrate**, and select your exported file.
-2. Upload your legacy assets `.zip` file to your server and extract it into the `storage/app/public` folder of the new admin panel. You don't need to wait for the database migration to finish first — this is a separate, independent step.
+2. Upload the `.zip` file containing only the **images folders** from your legacy assets to the server, and extract it into the `storage/app/public` folder of the new Admin Panel.
+
+   > **Note:** This step is independent of the database migration. You do not need to wait for the database migration to complete before uploading and extracting the images.
+
 3. The database migration runs automatically in the background — you don't need to do anything else while it processes. Behind the scenes, your data is transferred in a carefully ordered sequence (for example, languages and categories are migrated before the questions that belong to them) so that nothing gets linked incorrectly.
 4. Track progress on the page itself — status cards refresh automatically every few seconds so you can watch the migration move through each stage.
 

@@ -12,7 +12,8 @@
     "Quiz",
     "Sodha",
     "svgr",
-    "WRTeam"
+    "WRTeam",
+    "pcntl"
   ],
   "ignorePaths": [
     "node_modules/**",
