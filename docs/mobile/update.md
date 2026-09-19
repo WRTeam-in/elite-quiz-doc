@@ -1,9 +1,7 @@
 ---
-title: How to Update
+title: How to Update Your App and Admin Panel
 sidebar_position: 8
 ---
-
-# How to Update Your App and Admin Panel
 
 Keeping your Elite Quiz app and admin panel up to date ensures you benefit from the latest features, improvements, and security fixes. This guide provides a clear, step-by-step process for updating both the app and the admin panel.
 

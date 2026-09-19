@@ -15,7 +15,7 @@ Follow the complete App Deployment guide to build and publish your Elite Quiz Ap
   margin: '24px 0'
 }}>
   <div style={{fontSize: '1.8rem', marginBottom: '8px'}}>🚀</div>
-  <h3 style={{color: 'var(--ifm-color-primary)', marginBottom: '0px', fontSize: '1.2rem'}}>App Deployment Guide</h3>
+  <div style={{color: 'var(--ifm-color-primary)', marginBottom: '0px', fontSize: '1.2rem', fontWeight: 'bold'}}>App Deployment Guide</div>
   <p style={{marginBottom: '14px', color: 'var(--ifm-font-color-secondary)', fontSize: '0.9rem'}}>
     Click the link below to view the complete App Deployment Guide
   </p>

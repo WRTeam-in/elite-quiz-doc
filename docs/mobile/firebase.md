@@ -3,8 +3,6 @@ title: Firebase Setup
 sidebar_position: 4
 ---
 
-# Firebase Setup
-
 Follow the complete Firebase setup guide to configure Firebase and Authentication for the Elite Quiz App.
 
 <div style={{
@@ -16,7 +14,7 @@ Follow the complete Firebase setup guide to configure Firebase and Authenticatio
   margin: '24px 0'
 }}>
   <div style={{fontSize: '1.8rem', marginBottom: '8px'}}>🔥</div>
-  <h3 style={{color: 'var(--ifm-color-primary)', marginBottom: '0px', fontSize: '1.2rem'}}>Firebase Setup Guide</h3>
+  <div style={{color: 'var(--ifm-color-primary)', marginBottom: '0px', fontSize: '1.2rem', fontWeight: 'bold'}}>Firebase Setup Guide</div>
   <p style={{marginBottom: '14px', color: 'var(--ifm-font-color-secondary)', fontSize: '0.9rem'}}>
     Click the link below to view the complete Firebase & Authentication Setup Guide
   </p>

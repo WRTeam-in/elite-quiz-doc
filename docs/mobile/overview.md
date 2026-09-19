@@ -9,8 +9,6 @@ import DocBanner from '@site/src/components/DocBanner';
 
 <DocBanner />
 
-# Overview
-
 This guide will help you understand, set up, and customize your own version of our feature-rich quiz application.
 
 ## Requirements

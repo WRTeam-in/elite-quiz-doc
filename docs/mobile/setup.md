@@ -15,7 +15,7 @@ Follow the complete Flutter setup guide to configure your development environmen
   margin: '24px 0'
 }}>
   <div style={{fontSize: '1.8rem', marginBottom: '8px'}}>📘</div>
-  <h3 style={{color: 'var(--ifm-color-primary)', marginBottom: '0px', fontSize: '1.2rem'}}>Flutter Setup Guide</h3>
+  <div style={{color: 'var(--ifm-color-primary)', marginBottom: '0px', fontSize: '1.2rem', fontWeight: 'bold'}}>Flutter Setup Guide</div>
   <p style={{marginBottom: '14px', color: 'var(--ifm-font-color-secondary)', fontSize: '0.9rem'}}>
     Click the link below to view the complete Flutter Setup Guide
   </p>

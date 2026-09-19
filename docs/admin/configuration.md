@@ -54,7 +54,7 @@ Configure authentication methods for your application:
 
 ![Authentication Settings](/img/panel/authentication_settings.png)
 
-# System Configurations
+## System Configurations
 
 This section explains how to configure the Elite Quiz system settings for optimal performance.
 
