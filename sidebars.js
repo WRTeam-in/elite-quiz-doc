@@ -79,6 +79,7 @@ export default {
           items: ['mobile/monetization', 'mobile/ads-configuration', 'mobile/in-app-purchases'],
         },
         'mobile/notifications',
+        'mobile/facebook-events',
         'mobile/deployment',
         'mobile/update',
         'mobile/16kb-page-size',

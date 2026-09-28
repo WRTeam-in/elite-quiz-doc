@@ -6,29 +6,41 @@ sidebar_position: 2
 
 This page documents the version history and updates for the Elite Quiz Mobile application.
 
-## Compatibility Table
+## v3.0.2 (28 Sep 2026)
 
-<details>
-<summary><strong>Flutter Version Compatibility by App Version</strong></summary>
+```
+- Added: Guest mode.
+- Improved: Battle improvements.
+- Added: Facebook events.
+- Improved: Bug fixes and improvements.
+```
 
-| Flutter Version | App Versions |
-| --------------- | ------------ |
-| **v3.38.x** | v2.3.8, v2.3.7 |
-| **v3.35.x** | v2.3.6 |
-| **v3.32.x** | v2.3.5, v2.3.4 |
-| **v3.29.3** | v2.3.3, v2.3.2, v2.3.1 |
-| **v3.27.1** | v2.2.6 |
-| **v3.24.4** | v2.2.5 |
-| **v3.24.3** | v2.2.4 |
-| **v3.22.1** | v2.2.3, v2.2.2, v2.2.1, v2.2.0 |
-| **v3.19.3** | v2.1.9 – v2.1.6 |
-| **v3.16.9** | v2.1.5 – v2.0.8, v2.0.9.1 |
-| **v3.7.7** | v2.0.7 |
-| **v3.7.0** | v2.0.6 |
-| **v3.0.2** | v2.0.5 – v2.0.0 |
-| **v2.5.0** | v1.0.9 – v1.0.0 |
+## v3.0.1 (03 Sep 2026)
 
-</details>
+```
+- Added: Improvements and bug fixes.
+```
+
+## v3.0.0 (25 Aug 2026)
+
+```
+- Added: Updated the UI of the app.
+- Added: Added levels in Math Mania, Guess the Word, and Audio Quiz.
+- Added: Improved the Statistics module.
+- Added: Using Firebase Realtime Database for Battle and Group Battles.
+- Added: Compatible with latest Flutter version.
+- Added: Other improvements and bug fixes.
+
+Note: Upgrading from v2.3.9.1 to v3.0.X is not supported. A fresh installation is required for these versions.
+Note: Please read the installation instructions in the documentation carefully before proceeding.
+Doc: https://wrteam-in.github.io/elite-quiz-doc/admin/legacy-data-migration
+```
+
+## v2.3.9.1 (25 Jul 2026)
+
+```
+- Fixed: Google Play billing library issue.
+```
 
 ## v2.3.9 (31 March 2026)
 

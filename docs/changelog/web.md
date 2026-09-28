@@ -10,6 +10,39 @@ This page documents the version history and updates for the Elite Quiz Web appli
 
 
 <details open>
+<summary><h2>Version 3.0.2 (28 Sep 2026)</h2></summary>
+<ul>
+- <span className="badge badge--success">Added</span> Guest mode
+- <span className="badge badge--info">Improved</span> Battle improvements
+- <span className="badge badge--info">Improved</span> Bug fixes and improvements
+</ul>
+</details>
+
+<details>
+<summary><h2>Version 3.0.1 (03 Sep 2026)</h2></summary>
+<ul>
+- <span className="badge badge--success">Added</span> Improvements and bug fixes
+</ul>
+</details>
+
+<details>
+<summary><h2>Version 3.0.0 (25 Aug 2026)</h2></summary>
+<ul>
+- <span className="badge badge--success">Added</span> Updated the UI of the web
+- <span className="badge badge--success">Added</span> Added the level in the Math Mania, Guess the Word, Audio Quiz
+- <span className="badge badge--success">Added</span> Improved the statistics module
+- <span className="badge badge--success">Added</span> Using the Firebase Realtime Database for the battle and group battles
+- <span className="badge badge--success">Added</span> Other improvements and bug fixes
+- <span className="badge badge--warning">Updated</span> Backend migrated from CodeIgniter to Laravel
+</ul>
+<p>
+<strong>Note:</strong> Upgrading from v2.3.9.1 to v3.0.X is not supported. A fresh installation is required for these versions.<br />
+Please read the installation instructions in the documentation carefully before proceeding.<br />
+Doc : <a href="https://wrteam-in.github.io/elite-quiz-doc/admin/legacy-data-migration">https://wrteam-in.github.io/elite-quiz-doc/admin/legacy-data-migration</a>
+</p>
+</details>
+
+<details>
 <summary><h2>Version 2.3.9 (31 Mar 2026)</h2></summary>
 <ul>
 - <span className="badge badge--success">Added</span> Added the database and assets backup option in the admin panel
