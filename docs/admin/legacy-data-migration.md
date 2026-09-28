@@ -23,11 +23,9 @@ It's a **one-time, Super Admin-only** action, found at **General Management → 
 - **Set up your cron job first.** Every step of the migration runs in the background through your server's task queue, so your [cron job](./cron-job-setup.md) must already be running. If it isn't, an uploaded file will just sit at "Pending" indefinitely with no error shown — so make sure this is working before you upload anything.
 - **Your old database must be on version 2.3.9.** The migration tool checks your uploaded file and only accepts a database from that exact version of the old admin panel. If your file is from an older or newer version, the upload will be rejected with an error message.
 - **Don't use the old admin panel's System Updater for version 3.0.0 and above.** Version 3.0.0 is the new Laravel-based admin panel, not a regular CodeIgniter update — the old panel's built-in System Updater can't perform this switch. Use this Legacy Data Migration tool instead.
-- **Export your old database as a `.sql` file** using a tool like phpMyAdmin or `mysqldump`. The uploaded file can be up to **200MB**.
+- **Export your old database as a `.sql` file** using a tool like **phpMyAdmin**. The uploaded file can be up to **200MB**.
 
-  The easiest way to do this is from within the old admin panel itself — use the **Backup Data** menu in its sidebar to export your database directly:
-
-  ![Backup Data in Old Admin Panel](/img/panel/ci_panel_backup_data.png)
+  <!-- ![Backup Data in Old Admin Panel](/img/panel/ci_panel_backup_data.png) -->
 
   :::warning Don't use Backup Data for assets
   The **Backup Data** menu can also export your asset files (images, audio, badge icons, etc.) — but avoid using it for that.

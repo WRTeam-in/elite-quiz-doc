@@ -423,7 +423,7 @@ const DocBanner = () => {
             </div>
 
             <div className={styles.bannerContent}>
-                <h2 className={styles.bannerTitle}>From Code to Live — Hassle-Free Installation Service</h2>
+                <span className={styles.bannerTitle}>From Code to Live — Hassle-Free Installation Service</span>
                 <p className={styles.bannerDescription}>
                     Skip the struggle — we'll set up your app or script, so you can focus on business.
                 </p>
