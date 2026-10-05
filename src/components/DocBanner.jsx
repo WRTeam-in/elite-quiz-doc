@@ -429,7 +429,7 @@ const DocBanner = () => {
                 </p>
             </div>
 
-            <div className={styles.bannerAction}>
+            <div className={styles.bannerAction}> 
                 <Link
                     href="https://api.whatsapp.com/send?phone=919712445459&text=Hello%20Kishan,%20I%20want%20to%20know%20more%20about%20the%20installation%20service%20for%20{elite_quiz}"
                     target="_blank"
