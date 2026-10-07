@@ -5,7 +5,11 @@ pagination_next: null
 
 # Common Firebase Configuration
 
-This guide will help you set up Firebase for Elite Quiz, step by step. No prior experience with Firebase is required. Just follow along, and you’ll be ready in no time.
+This guide covers the complete Firebase setup for Elite Quiz, for both the **Mobile App** and the **Web App**. No prior experience with Firebase is required. Just follow the steps in order.
+
+:::tip One Firebase project for both platforms
+If you use both the Mobile App and the Web App, use **one Firebase project** for both. Do Step 1, Step 3, and Step 4 once, then follow the part of Step 2 for each platform you use.
+:::
 
 ---
 
@@ -13,17 +17,36 @@ This guide will help you set up Firebase for Elite Quiz, step by step. No prior 
 
 Elite Quiz uses Firebase for two main things:
 
-- **Authentication:** Let users sign in with Email, Google, Apple, or Phone.
-- **Firestore Database:** Store battle quiz progress, battle messages.
+- **Authentication:** Let users sign in with Email, Google, Apple, or Phone, or play as a guest.
+- **Realtime Database:** Store live data for **1v1 Battle** and **Group Battle**, such as battle rooms and player progress.
+
+**Setup order:**
+
+```
+Step 1: Create Firebase Project
+        │
+        ▼
+Step 2: Connect Your Apps ──► 2A. Mobile App (Flutter)
+        │                └──► 2B. Web App (Next.js)
+        ▼
+Step 3: Enable Authentication
+        │
+        ▼
+Step 4: Set Up Realtime Database
+```
 
 ---
 
 ## Step 1: Create Your Firebase Project
 
+:::note Already have a project?
+If you already created a Firebase project for the other platform (e.g., you bought the App first and are now setting up the Web), skip this step and use the same project.
+:::
+
 1. Go to the [Firebase Console](https://console.firebase.google.com/).
 2. Click **Add project**.
 3. Enter a project name (e.g., `EliteQuiz`) and accept the terms.
-4. Choose whether to enable Google Analytics (recommended for most users).
+4. Choose whether to enable Google Analytics (recommended for most users, and required if you want analytics on the Web App).
 5. Click **Create project** and wait for setup to finish.
 
 You’ll see your new project dashboard when it’s ready.
@@ -33,95 +56,174 @@ You’ll see your new project dashboard when it’s ready.
 
 ---
 
-## Step 2: Enable Sign-In Methods
+## Step 2: Connect Your Apps to Firebase
 
-Elite Quiz supports several ways for users to sign in. Enable them all now — you can turn off any you don’t want later from the admin panel.
+Connect each platform you use to the Firebase project you created in Step 1.
 
-:::note Important Note
-To use Phone/OTP Login, your Firebase project must be on the **Blaze** (pay-as-you-go) plan. This feature will not work on the Spark (free tier) plan.
+### 2A. Mobile App (Flutter)
+
+Add your Android and iOS apps to the Firebase project and add the Firebase configuration files to the Flutter code. Follow our Flutter Firebase setup guide:
+
+<div style={{
+  border: '2px solid var(--ifm-color-primary)',
+  borderRadius: '12px',
+  padding: '20px 24px',
+  textAlign: 'center',
+  background: 'rgba(240, 24, 118, 0.05)',
+  margin: '24px 0'
+}}>
+  <div style={{fontSize: '1.8rem', marginBottom: '8px'}}>🔥</div>
+  <div style={{color: 'var(--ifm-color-primary)', marginBottom: '0px', fontSize: '1.2rem', fontWeight: 'bold'}}>Flutter Firebase Setup Guide</div>
+  <p style={{marginBottom: '14px', color: 'var(--ifm-font-color-secondary)', fontSize: '0.9rem'}}>
+    Click the link below to connect your Android and iOS apps to Firebase
+  </p>
+  <a
+    href="https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/firebase"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{color: 'var(--ifm-color-primary)', fontWeight: '600', fontSize: '0.95rem'}}
+  >
+    Click here →
+  </a>
+</div>
+
+When you're done, check that:
+
+- The Android config file (`google-services.json`) and the iOS config file (`GoogleService-Info.plist`) from **your** Firebase project are in the app code.
+- You've added your app's **SHA-1** fingerprint to the Android app in Firebase. Google Sign-In will not work on Android without it.
+
+### 2B. Web App (Next.js)
+
+#### Video Tutorial
+
+<iframe
+  width="100%"
+  height="500"
+  style={{ borderRadius: '10px' }}
+  src="https://www.youtube.com/embed/adrnST-IrgU"
+  title="Firebase Configuration Video Tutorial"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
+#### Steps
+
+1. Add a web application to your Firebase project:
+
+   ![Add Web App](/img/web/addWeb.png)
+
+2. Enter the App Name and click **Register App**:
+
+   ![Register App](/img/web/addWeb2.png)
+
+3. Open **Project settings**, select your web app, and choose **Config** to view its credentials:
+
+   ![Firebase Integration](/img/web/firebase-integration.png)
+
+4. Copy the highlighted code and paste each value into the matching field in **Admin Panel > Web Settings > Settings**:
+
+   ![Firebase Config Code](/img/web/addWeb3.png)
+
+5. These credentials must match the ones you set in the admin panel. Otherwise, the Web App will not work properly:
+
+   ![Admin Panel Config](/img/web/addWeb4.png)
+   ![Admin Panel Config](/img/web/firebase_setting.png)
+
+6. Add your website domain to **Authentication > Settings > Authorized domains**. Enter only the domain name, without `http://`, `https://`, or `www.` (e.g., `elitequiz.wrteam.in`). Login will not work on your live site without this step.
+
+   ![Domain Configuration](/img/web/firebase-configuration.png)
+
+7. **(Optional) Google Analytics:** Copy the `measurementId` and paste it in the `.env` file in the website code:
+
+   ![admin panel measurementId](/img/web/firebaseMeasuremetid.png)
+   ![measurementId paste in .env file in code](/img/web/envFirebase.png)
+
+8. Log in to [Google Analytics](https://marketingplatform.google.com/about/analytics/) using the same account you used to create the Firebase project.
+
+   ![Google Analytics for the Web App](/img/web/analycs_web.png)
+
+---
+
+## Step 3: Enable Authentication
+
+Elite Quiz supports several ways for users to sign in. Enable them all now. You can hide any you don’t want later from the admin panel.
+
+:::warning Blaze plan required for Phone login
+To use Phone/OTP Login, your Firebase project must be on the **Blaze** (pay-as-you-go) plan. Without a billing account, Firebase limits new projects to **10 SMS per day**, so most users won't receive their OTP.
 :::
-
-**How to enable sign-in methods:**
 
 1. In your Firebase project, click [**Authentication**](https://console.firebase.google.com/project/_/authentication/providers) in the left menu.
 2. Go to the **Sign-in method** tab.
-3. Enable these providers:
-   - Email/Password
-   - Phone
-   - Google
-   - Apple
+3. Click **Add new provider** and enable each of these providers:
+   - **Email/Password**
+   - **Phone**
+   - **Google**
+   - **Apple**
+   - **Anonymous**: required for **Guest mode**, which lets users play without creating an account
 
-![Screenshot: Enable Auth Methods in Firebase](/img/common/firebase_authentication.webp)
+   When you're done, all five providers should show **Enabled**:
 
-4. **Update Public Settings:** Go to [Project Settings](https://console.firebase.google.com/u/0/project/_/settings/general) and configure your Public Settings. The Public Facing Name appears in verification emails sent to users, so they'll see your Quiz App name instead of your Firebase project name.
+   ![Screenshot: All five sign-in providers enabled in Firebase](/img/common/firebase_auth_providers.png)
 
-![Screenshot: Update Public Settings](/img/common/firebase_update_public_settings.webp)
+   :::note Guest mode needs Anonymous sign-in
+   Since v3.0.2, Elite Quiz supports **Guest mode** on the Mobile App and the Web App. If **Anonymous** is not enabled, guest login will fail.
+   :::
 
-5. **For Elite Quiz Web users:** Add your website domain to the Authorized Domains list. Enter only the domain name without `https://` or `http://` (e.g., `elitequiz.wrteam.in`).
+4. **Update Public Settings:** Go to [Project Settings](https://console.firebase.google.com/u/0/project/_/settings/general) and configure your Public Settings. The Public-facing name appears in verification emails sent to users, so they'll see your Quiz App name instead of your Firebase project name.
 
-![Screenshot: Add Authorized Domains for Elite Web](/img/common/firebase_auth_add_authorised_domains.webp)
+   ![Screenshot: Update Public Settings](/img/common/firebase_update_public_settings.webp)
 
-> **Tip:** To control which sign-in options are visible to your users, use the Elite Quiz admin panel:
->
-> - Go to `Settings > Authentication Settings`.
-> - Turn off any methods you don’t want users to see.
+:::tip Choose which login options users see
+In the Elite Quiz admin panel, go to **General Management > Settings > System Configurations**. In the **Auth Configuration** section, turn off any login methods you don’t want users to see. Changes apply to both the Mobile App and the Web App.
 
-![Screenshot: Admin Panel Authentication Settings](/img/common/panel_auth_settings.png)
+![Screenshot: Auth Configuration in Admin Panel System Configurations](/img/common/panel_auth_configuration.png)
+:::
 
 ---
 
-## Step 3: Set Up Firestore Database
+## Step 4: Set Up Realtime Database
 
-Elite Quiz uses Firestore to store real-time data for battle quizzes, like quiz progress and chat messages.
+Elite Quiz uses the Firebase Realtime Database for **1v1 Battle** and **Group Battle**. Without it, battles will not work on the Mobile App or the Web App.
 
-### Option 1: Watch the Setup Video
+:::info Upgrading from v2.x?
+Since v3.0.0, battles use the **Realtime Database** instead of Firestore. You don't need to create a Firestore database or Firestore indexes for v3.
+:::
 
-import Video from '@site/src/components/Video';
+1. In Firebase, click **Build** in the left menu, then select [**Realtime Database**](https://console.firebase.google.com/project/_/database) (it may also be listed under **Databases & Storage**).
+2. Click **Create Database**, choose the location closest to your users, and click **Next** to finish.
 
-<Video src="https://youtu.be/wILoHdogjOI" title="Firebase Firestore Setup" />
+   ![Screenshot: Create Realtime Database](/img/app/create_realtime_database.png)
 
-### Option 2: Follow These Steps
-
-1. In Firebase, click **Build** in the left menu, then select [**Firestore Database**](https://console.firebase.google.com/project/_/firestore/).
-2. Click **Create database**.
-3. Choose the location closest to your users and confirm.
-
-   ![Screenshot: Create Firestore Database](/img/common/firestore_create_db.png)
-   ![Screenshot: Select Database Location](/img/common/firestore_create_step2.png)
-
-4. **Set Firestore Security Rules:**
+3. **Set Realtime Database Rules:**
 
    - Go to the **Rules** tab.
-   - Delete any existing rules and paste in the following:
+   - Delete any existing rules, paste in the following, and click **Publish**:
 
-   ```javascript
-    rules_version = '2';
-    service cloud.firestore {
-        match /databases/{database}/documents {
-            match /{document=**} {
-                allow read, write: if request.auth.uid != null;
-            }
-        }
-    }
+   ```json
+   {
+     "rules": {
+       ".read": "auth != null",
+       ".write": "auth != null",
+       "battleRooms": {
+         ".indexOn": ["roomCode", "categoryId", "type"]
+       }
+     }
+   }
    ```
 
-   ![Screenshot: Add Rule in Firestore](/img/common/firestore_rules.webp)
-
-5. **Create an Index for Messaging**
-
-   - This is needed for the in-game chat feature.
-   - In Firestore, go to the **Indexes** tab.
-   - Click **Add Index** and fill in:
-     - **Collection ID:** `messages`
-     - **First Field:** `roomId` (Ascending) — note the capital "I"
-     - **Second Field:** `timestamp` (Descending)
-     - **Query Scope:** Collection
-
-   ![Screenshot: Create Index for Messages](/img/common/firestore_index.webp)
+   ![Screenshot: Realtime Database Rules](/img/app/firebase_rtdb_rules.png)
 
 ---
 
-## What’s Next?
+## Checklist
 
-- You’re done with the common Firebase setup! 🎉
-- Now, follow the next guide for your platform (mobile or web) to finish integration.
+Before moving on, make sure that:
+
+- [ ] Your Firebase project is created.
+- [ ] **Mobile:** Android and iOS apps are added, and their config files and SHA-1 fingerprint are set.
+- [ ] **Web:** The web app is registered, its config is in **Admin Panel > Web Settings > Settings**, and your domain is authorized.
+- [ ] Email/Password, Phone, Google, Apple, and Anonymous sign-in are enabled (Blaze plan for Phone).
+- [ ] The Realtime Database is created and its rules are published.
+
+You’re done with the Firebase setup! 🎉

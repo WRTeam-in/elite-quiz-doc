@@ -19,7 +19,7 @@ This is a Docusaurus-based documentation site for Elite Quiz, a comprehensive mu
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Admin Panel   │    │  Web App        │    │  Mobile App     │
-│ (CodeIgniter 3) │    │  (Next.js)      │    │  (Flutter)      │
+│   (Laravel)     │    │  (Next.js)      │    │  (Flutter)      │
 │                 │    │                 │    │                 │
 │ • MySQL Database│    │ • User Interface│    │ • iOS & Android │
 │   - Quiz Data   │    │ • Quiz Taking   │    │ • AdMob & Unity │
@@ -41,10 +41,12 @@ This is a Docusaurus-based documentation site for Elite Quiz, a comprehensive mu
                          │   - Email       │
                          │   - Phone/SMS   │
                          │   - Apple ID    │
+                         │   - Anonymous   │
+                         │     (Guest mode)│
                          │                 │
-                         │ • Firestore     │
+                         │ • Realtime DB   │
+                         │   - Battle Rooms│
                          │   - Battle Data │
-                         │   - Battle Msgs │
                          └─────────────────┘
 
 Deployment Options:
@@ -56,10 +58,11 @@ Deployment Options:
 
 The Elite Quiz platform operates on a hybrid architecture:
 
-1. **Backend API & Dashboard**: CodeIgniter 3 PHP framework with MySQL database storing all quiz content, user data, and system configurations
+1. **Backend API & Dashboard**: Laravel PHP framework with MySQL database storing all quiz content, user data, and system configurations (v3.0.0+; v2.x used CodeIgniter 3; see the Legacy Data Migration docs)
 2. **Frontend Applications**: Next.js web app and Flutter mobile apps that consume the REST API
-3. **Firebase Services**: Authentication for all login methods and Firestore for synchronized battle functionality with real-time messaging
-4. **Documentation Site**: This Docusaurus site providing comprehensive setup and usage guidance
+3. **Firebase Services**: Authentication for all login methods (including Anonymous for Guest mode, v3.0.2+) and the Firebase **Realtime Database** for 1v1 and Group Battles (v3.0.0+). v3 does **not** use Firestore; don't document Firestore rules or indexes for v3.
+4. **Firebase docs location**: All Firebase setup (project, connecting the Flutter and Web apps, authentication, Realtime Database) lives in one page, `docs/common_firebase_config.md`. `docs/mobile/firebase.md` and `docs/web/firebase-integration.md` only link to its sections. Edit the common page; don't duplicate steps in the platform pages.
+5. **Documentation Site**: This Docusaurus site providing comprehensive setup and usage guidance
 
 ### Battle System Architecture
 
@@ -83,7 +86,7 @@ Battle Types & Timing:
 Common Features:
 • Per-question timer with auto-submit on timeout (-1 value)
 • Real-time messaging during battles
-• Battle progress stored in Firestore
+• Battle progress stored in Firebase Realtime Database
 • Results screen shown after completion
 ```
 
@@ -233,7 +236,7 @@ Based on analysis of existing FAQs and typical user journeys, users commonly ask
 - "My app works in development but not production"
 - "How do I handle version compatibility issues?"
 - "Battle synchronization issues between players"
-- "Firestore rules preventing battle data access"
+- "Realtime Database rules preventing battle data access"
 - "Battle timers not working correctly"
 
 ### Business & Licensing
@@ -272,12 +275,12 @@ Requirements → Admin Panel → Firebase → Frontend Apps → Customization �
 When writing new documentation, prioritize these common user needs:
 
 1. **Decision Framework**: Help users choose which components they need (shared vs separate deployments)
-2. **Battle System Setup**: Complete guide for Firestore rules, indexing, and real-time synchronization
+2. **Battle System Setup**: Complete guide for Realtime Database rules, indexing, and real-time synchronization
 3. **Monetization Configuration**: Step-by-step AdMob, Unity Ads, and IAP integration
 4. **Troubleshooting Flowcharts**: Visual guides for Firebase, battle, and deployment issues
 5. **Integration Examples**: Real-world scenarios showing component interactions
 6. **Performance Guidelines**: Best practices for scaling battles and managing concurrent users
-7. **Security Considerations**: Authentication, Firestore rules, and payment security
+7. **Security Considerations**: Authentication, Realtime Database rules, and payment security
 
 ## Development Notes
 

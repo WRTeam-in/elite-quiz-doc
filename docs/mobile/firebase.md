@@ -3,75 +3,19 @@ title: Firebase Setup
 sidebar_position: 4
 ---
 
-Follow the complete Firebase setup guide to configure Firebase and Authentication for the Elite Quiz App.
+# Firebase Setup
 
-<div style={{
-  border: '2px solid var(--ifm-color-primary)',
-  borderRadius: '12px',
-  padding: '20px 24px',
-  textAlign: 'center',
-  background: 'rgba(240, 24, 118, 0.05)',
-  margin: '24px 0'
-}}>
-  <div style={{fontSize: '1.8rem', marginBottom: '8px'}}>🔥</div>
-  <div style={{color: 'var(--ifm-color-primary)', marginBottom: '0px', fontSize: '1.2rem', fontWeight: 'bold'}}>Firebase Setup Guide</div>
-  <p style={{marginBottom: '14px', color: 'var(--ifm-font-color-secondary)', fontSize: '0.9rem'}}>
-    Click the link below to view the complete Firebase & Authentication Setup Guide
-  </p>
-  <a
-    href="https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/firebase"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{color: 'var(--ifm-color-primary)', fontWeight: '600', fontSize: '0.95rem'}}
-  >
-    Click here →
-  </a>
-</div>
+The complete Firebase setup for the Mobile App, from creating the project to connecting the app, enabling authentication, and setting up the Realtime Database for battles, is in one guide:
 
-## Authentication Providers
+👉 **[Common Firebase Configuration](../common_firebase_config.md)**
 
-:::note Important
-Make sure you have enabled the required Authentication Providers (e.g., **Email/Password**, **Phone**, **Google**, **Apple**) in your Firebase console under **Authentication > Sign-in method**.
+Follow these sections in order:
+
+1. [Step 1: Create Your Firebase Project](../common_firebase_config.md#step-1-create-your-firebase-project)
+2. [Step 2A: Connect the Mobile App (Flutter)](../common_firebase_config.md#2a-mobile-app-flutter)
+3. [Step 3: Enable Authentication](../common_firebase_config.md#step-3-enable-authentication)
+4. [Step 4: Set Up Realtime Database](../common_firebase_config.md#step-4-set-up-realtime-database)
+
+:::tip Using the Web App too?
+Use the same Firebase project for both. You only need to do Step 2B for the web, since Steps 1, 3, and 4 are shared.
 :::
-
-:::warning Billing Plan Requirement
-Make sure your Firebase project plan is upgraded to **Blaze (Pay as you go)**. The Blaze plan is required for **Phone Authentication** to send SMS OTP verification messages without interruption.
-:::
-
-![Firebase Authentication Providers](/img/app/firebase_auth.png)
-
-## Realtime Database Setup
-
-:::info Required Feature
-Firebase Realtime Database is required for **1v1 Battle** and **Group Battle** features to work properly in the app.
-:::
-
-### 1. Create Realtime Database
-
-1. In your Firebase console, navigate to **Build > Realtime Database** (or under **Databases & Storage**).
-2. Click on **Create Database**, select your database location, and click **Next** to initialize.
-
-![Create Realtime Database](/img/app/create_realtime_database.png)
-
-### 2. Update Database Rules
-
-Once the Realtime Database is created:
-
-1. Navigate to the **Rules** tab in the Realtime Database section.
-2. Replace the existing rules with the following JSON configuration and click **Publish**:
-
-```json
-{
-  "rules": {
-    ".read": "auth != null",
-    ".write": "auth != null",
-    "battleRooms": {
-      ".indexOn": ["roomCode", "categoryId", "type"]
-    }
-  }
-}
-```
-
-![Firebase Realtime Database Rules](/img/app/firebase_rtdb_rules.png)
-
-
