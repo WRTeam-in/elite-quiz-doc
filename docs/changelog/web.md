@@ -10,6 +10,15 @@ This page documents the version history and updates for the Elite Quiz Web appli
 
 
 <details open>
+<summary><h2>Version 3.0.3 (26 Nov 2026)</h2></summary>
+<ul>
+- <span className="badge badge--success">Added</span> Spin wheel
+- <span className="badge badge--success">Added</span> Content pricing module
+- <span className="badge badge--info">Improved</span> Bug fixes and improvements
+</ul>
+</details>
+
+<details>
 <summary><h2>Version 3.0.2 (28 Sep 2026)</h2></summary>
 <ul>
 - <span className="badge badge--success">Added</span> Guest mode

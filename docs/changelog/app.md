@@ -6,6 +6,14 @@ sidebar_position: 2
 
 This page documents the version history and updates for the Elite Quiz Mobile application.
 
+## v3.0.3 (26 Nov 2026)
+
+```
+- Added: Spin wheel.
+- Added: Content pricing module.
+- Improved: Bug fixes and improvements.
+```
+
 ## v3.0.2 (28 Sep 2026)
 
 ```
