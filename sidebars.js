@@ -42,6 +42,7 @@ export default {
         'admin/configuration',
         'admin/settings',
         'admin/in-app-purchase-config',
+        'admin/payment-gateways',
         'admin/system-language',
         'admin/bulk-imports',
       ],

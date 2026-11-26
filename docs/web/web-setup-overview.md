@@ -31,6 +31,10 @@ Setting the correct API URL is crucial for the web application to communicate wi
 If the API URL is incorrect, users won't be able to log in or access quiz data.
 :::
 
+:::tip Selling coins on the website
+To let users buy coins on the website, set your website's address as **Frontend URL** in the Admin Panel and configure a payment gateway (Stripe, Razorpay or Flutterwave). See [Payment Gateway Configuration (Web)](../admin/payment-gateways.md).
+:::
+
 ## Secure Your Firebase API Key
 
 The Firebase browser API key is visible in your web app's code. Restrict it so only your own website can use it.

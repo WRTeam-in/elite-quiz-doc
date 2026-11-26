@@ -26,6 +26,10 @@ This foundational knowledge is essential because this page focuses only on Elite
 Subscriptions are not currently supported.
 :::
 
+:::tip Website purchases
+In-App Purchases are for the Android and iOS apps only. The website sells coins through Stripe, Razorpay or Flutterwave. See [Payment Gateway Configuration (Web)](../admin/payment-gateways.md).
+:::
+
 <details>
   <summary><strong>Quick Start Checklist (For Experienced Users)</strong></summary>
 

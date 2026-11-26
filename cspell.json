@@ -13,7 +13,8 @@
     "Sodha",
     "svgr",
     "WRTeam",
-    "pcntl"
+    "pcntl",
+    "whsec"
   ],
   "ignorePaths": [
     "node_modules/**",

@@ -15,6 +15,7 @@ This page documents the version history and updates for the Elite Quiz Web appli
 - <span className="badge badge--success">Added</span> Spin wheel
 - <span className="badge badge--success">Added</span> Content pricing module
 - <span className="badge badge--success">Added</span> Buy coins
+- <span className="badge badge--success">Added</span> Payment gateways: Stripe, Razorpay and Flutterwave
 - <span className="badge badge--info">Improved</span> Bug fixes and improvements
 </ul>
 </details>
