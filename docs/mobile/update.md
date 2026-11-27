@@ -46,6 +46,10 @@ Keeping your Elite Quiz app and admin panel up to date ensures you benefit from 
    - In your admin panel, go to the 'System Update Section'.
    - Upload the specific update script for your version transition (e.g., `1.0.0-to-1.0.1.zip`).
 
+:::tip Updating the Admin Panel from v3.0.2.1 to v3.0.3?
+It's installed in two steps. Follow [Update Admin Panel to v3.0.3](../admin/update-to-3.0.3.md).
+:::
+
 ---
 
 ## Updating Your App

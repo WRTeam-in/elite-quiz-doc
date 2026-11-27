@@ -37,6 +37,7 @@ export default {
         'admin/prerequisite',
         'admin/installation',
         'admin/cron-job-setup',
+        'admin/update-to-3.0.3',
         'admin/legacy-migration-notes',
         'admin/legacy-data-migration',
         'admin/configuration',
